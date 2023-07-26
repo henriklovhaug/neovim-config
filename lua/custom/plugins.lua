@@ -60,6 +60,8 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
+  --
+  { import = "custom.configs.extras.symbols-outline", },
 }
 
 return plugins
