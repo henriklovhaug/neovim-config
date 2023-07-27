@@ -6,13 +6,15 @@ M.treesitter = {
     "lua",
     "html",
     "css",
+    "scss",
     "javascript",
     "typescript",
     "tsx",
     "c",
     "markdown",
     "markdown_inline",
-    "rust"
+    "rust",
+    "svelte",
   },
   indent = {
     enable = true,
@@ -41,6 +43,9 @@ M.mason = {
 
     -- rust
     "rust-analyzer",
+
+    -- svelte
+    "svelte-language-server",
   },
 }
 
