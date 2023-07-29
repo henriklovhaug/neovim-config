@@ -18,6 +18,16 @@ M.crates = {
   }
 }
 
+M.rust = {
+  n = {
+    ["<leader>rha"] = {
+      function ()
+        require("rust-tools").hover_actions.hover_actions()
+      end,
+    }
+  }
+}
+
 -- more keybinds!
 
 return M

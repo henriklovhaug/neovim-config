@@ -5,3 +5,6 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+--
+--
+require "custom.configs.set"

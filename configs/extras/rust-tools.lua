@@ -7,14 +7,8 @@ local spec = {
   config = function()
     require("rust-tools").setup {
       tools = {
-        autoSetHints = true,
-        runnables = {
-          use_telescope = true,
-        },
-        inlay_hints = {
-          show_parameter_hints = true,
-          parameter_hints_prefix = "<- ",
-          other_hints_prefix = "=> ",
+        hover_actions = {
+          auto_focus = true,
         },
       },
       server = {
@@ -23,7 +17,7 @@ local spec = {
       },
     }
   end,
-  dependecies = "neovim/nvim-lspconfig",
+  dependencies = "neovim/nvim-lspconfig",
 }
 
 return spec
