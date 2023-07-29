@@ -47,6 +47,26 @@ local plugins = {
     end,
   },
 
+  {
+    "saecki/crates.nvim",
+    dependencies = "hrsh7th/nvim-cmp",
+    ft = { "rust", "toml" },
+    config = function(_, opts)
+      local crate = require "crates"
+      crate.setup(opts)
+      crate.show()
+    end,
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local M = require "plugins.configs.cmp"
+      table.insert(M.sources, { name = "crates" })
+      return M
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
@@ -62,7 +82,7 @@ local plugins = {
   -- }
   --
   -- { import = "custom.configs.extras.file_name_without_dot_lua" },
-  { import = "custom.configs.extras", },
+  { import = "custom.configs.extras" },
 }
 
 return plugins
