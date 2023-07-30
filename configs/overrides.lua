@@ -14,7 +14,9 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "rust",
+    "go",
     "svelte",
+    "dockerfile",
   },
   indent = {
     enable = true,
@@ -48,7 +50,25 @@ M.mason = {
     "svelte-language-server",
 
     -- Docker compose
-    "docker-compose-language-server"
+    "docker-compose-language-service",
+    "dockerfile-language-server",
+    "hadolint",
+
+    -- sql
+    "sqlfluff",
+    "sqls",
+
+    -- go
+    "gopls",
+    "glint",
+    "go-debug-adapter",
+    "goimports",
+    "goimports-reviser",
+    "golangci-lint",
+    "golangci-lint-langserver",
+    "golines",
+    "gotests",
+    "gotestsum",
   },
 }
 
