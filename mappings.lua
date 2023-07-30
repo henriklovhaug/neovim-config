@@ -24,6 +24,7 @@ M.rust = {
       function ()
         require("rust-tools").hover_actions.hover_actions()
       end,
+      "show hover actions",
     }
   }
 }
