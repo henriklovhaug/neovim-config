@@ -46,6 +46,9 @@ M.mason = {
 
     -- svelte
     "svelte-language-server",
+
+    -- Docker compose
+    "docker-compose-language-server"
   },
 }
 
