@@ -13,7 +13,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- 
 -- lspconfig.pyright.setup { blabla}
 local function organize_imports()
   local params = {
