@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd" , "svelte", "dockerls"}
+local servers = { "html", "cssls", "tsserver", "clangd", "svelte", "dockerls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -17,8 +17,8 @@ end
 local function organize_imports()
   local params = {
     command = "_typescript.organizeImports",
-    arguments = {vim.api.nvim_buf_get_name(0)},
-    title = ""
+    arguments = { vim.api.nvim_buf_get_name(0) },
+    title = "",
   }
   vim.lsp.buf.execute_command(params)
 end
@@ -29,7 +29,7 @@ lspconfig.tsserver.setup {
   commands = {
     OrganizeImports = {
       organize_imports,
-      description = "Organize Imports"
-    }
-  }
+      description = "Organize Imports",
+    },
+  },
 }

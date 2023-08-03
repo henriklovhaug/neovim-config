@@ -17,6 +17,7 @@ M.treesitter = {
     "go",
     "svelte",
     "dockerfile",
+    "java",
   },
   indent = {
     enable = true,
@@ -69,6 +70,9 @@ M.mason = {
     "golines",
     "gotests",
     "gotestsum",
+
+    -- java
+    "jdtls",
   },
 }
 
