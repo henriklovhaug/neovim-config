@@ -15,6 +15,9 @@ local sources = {
   -- Lua
   b.formatting.stylua,
 
+  -- Java
+  b.formatting.google_java_format,
+
   -- cpp
   b.formatting.clang_format,
 
@@ -24,14 +27,14 @@ local sources = {
   },
 
   -- sql
-  b.diagnostics.sqlfluff.with({
-        extra_args = { "--dialect", "postgres" }, -- change to your dialect
-    }),
-  b.formatting.sqlfluff.with({
-        extra_args = { "--dialect", "postgres" }, -- change to your dialect
-    }),
+  b.diagnostics.sqlfluff.with {
+    extra_args = { "--dialect", "postgres" }, -- change to your dialect
+  },
+  b.formatting.sqlfluff.with {
+    extra_args = { "--dialect", "postgres" }, -- change to your dialect
+  },
 
-  -- docker 
+  -- docker
   b.diagnostics.hadolint,
 }
 
