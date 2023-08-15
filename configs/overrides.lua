@@ -74,6 +74,9 @@ M.mason = {
     -- java
     "jdtls",
     "google-java-format",
+
+    --tailwindcss
+    "tailwindcss-language-server",
   },
 }
 
