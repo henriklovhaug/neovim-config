@@ -18,6 +18,7 @@ M.treesitter = {
     "svelte",
     "dockerfile",
     "java",
+    "latex",
   },
   indent = {
     enable = true,
@@ -77,6 +78,9 @@ M.mason = {
 
     --tailwindcss
     "tailwindcss-language-server",
+
+    --latex
+    "texlab",
   },
 }
 

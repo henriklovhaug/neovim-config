@@ -39,6 +39,9 @@ local sources = {
 
   -- docker
   b.diagnostics.hadolint,
+
+  --latex
+  b.formatting.latexindent,
 }
 
 null_ls.setup {
