@@ -42,6 +42,11 @@ local sources = {
 
   --latex
   b.formatting.latexindent,
+
+  -- python
+  b.diagnostics.mypy,
+  b.diagnostics.ruff,
+  b.formatting.black,
 }
 
 null_ls.setup {

@@ -19,6 +19,8 @@ M.treesitter = {
     "dockerfile",
     "java",
     "latex",
+    "python",
+    "json",
   },
   indent = {
     enable = true,
@@ -40,6 +42,13 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+
+    --python stuff
+    "pyright",
+    "mypy",
+    "ruff",
+    "black",
+    "debugpy",
 
     -- c/cpp stuff
     "clangd",
