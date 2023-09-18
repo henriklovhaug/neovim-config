@@ -119,7 +119,6 @@ local plugins = {
   --   lazy = false,
   -- }
   --
-  -- { import = "custom.configs.extras.file_name_without_dot_lua" },
   { import = "custom.configs.extras" },
 }
 

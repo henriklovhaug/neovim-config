@@ -63,6 +63,12 @@ return {
           vim.fs.find({ ".gradlew", ".git", "mvnw", "pom.xml", "build.gradle" }, { upward = true })[1]
         ),
 
+        settings = {
+          java = {
+            signatureHelp = { enabled = true },
+          },
+        },
+
         init_options = {
           bundles = bundles,
         },
