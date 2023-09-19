@@ -105,6 +105,18 @@ local plugins = {
     end,
   },
 
+  -- Currently broken, PR is open
+  {
+    "toppair/peek.nvim",
+    event = { "BufRead", "BufNewFile" },
+    build = "deno task --quiet build:fast",
+    config = function()
+      require("peek").setup()
+      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
