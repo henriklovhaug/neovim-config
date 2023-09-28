@@ -115,6 +115,15 @@ M.telescope = {
   },
 }
 
+M.nvim = {
+  n = {
+    ["<leader>qc"] = {
+      "<cmd>cclose<CR>",
+      "Close quickfix",
+    },
+  },
+}
+
 -- more keybinds!
 
 return M
