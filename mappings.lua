@@ -106,7 +106,7 @@ M.jdtls = {
 
 M.telescope = {
   n = {
-    ["<leader>fd"] = {
+    ["<leader>fr"] = {
       function()
         require("telescope.builtin").lsp_references()
       end,

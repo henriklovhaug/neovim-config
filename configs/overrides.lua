@@ -21,6 +21,7 @@ M.treesitter = {
     "latex",
     "python",
     "json",
+    "prisma",
   },
   indent = {
     enable = true,
@@ -68,6 +69,7 @@ M.mason = {
     -- sql
     "sqlfluff",
     "sqls",
+    "prisma-language-server",
 
     -- go
     "gopls",
