@@ -133,6 +133,15 @@ M.db = {
   },
 }
 
+M.lspconfig = {
+  n = {
+    ["<leader>ca"] = {
+      "<cmd>CodeActionMenu<CR>",
+      "Code action",
+    },
+  },
+}
+
 -- more keybinds!
 
 return M
