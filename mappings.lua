@@ -124,6 +124,15 @@ M.nvim = {
   },
 }
 
+M.db = {
+  n = {
+    ["<leader>tu"] = {
+      "<cmd>DBUIToggle<CR>",
+      "Toggle db ui",
+    },
+  },
+}
+
 -- more keybinds!
 
 return M

@@ -26,17 +26,22 @@ return {
       -- get the mason install path
       local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
       -- local debug_install_path = require("mason-registry").get_package("java-debug-adapter"):get_install_path()
+      local debug_install_path = require("mason-registry").get_package("java-debug-adapter"):get_install_path()
       local bundles = {
-        "/home/henrik/.m2/repository/com/microsoft/java/com.microsoft.java.debug.plugin/0.49.0/com.microsoft.java.debug.plugin-0.49.0.jar",
+        -- "/home/henrik/.m2/repository/com/microsoft/java/com.microsoft.java.debug.plugin/0.49.0/com.microsoft.java.debug.plugin-0.49.0.jar",
+        vim.fn.glob(debug_install_path .. "/extension/server/com.microsoft.java.debug.plugin-*.jar", 1),
       }
 
-      vim.list_extend(
-        bundles,
-        vim.split(
-          vim.fn.glob("/home/henrik/.vscode-server/extensions/vscjava.vscode-java-test-0.39.1/server/*.jar", 1),
-          "\n"
-        )
-      )
+      local java_test_path = require("mason-registry").get_package("java-test"):get_install_path()
+      vim.list_extend(bundles, vim.split(vim.fn.glob(java_test_path .. "/extension/server/*.jar", 1), "\n"))
+
+      -- vim.list_extend(
+      --   bundles,
+      --   vim.split(
+      --     vim.fn.glob("/home/henrik/.vscode-server/extensions/vscjava.vscode-java-test-0.39.1/server/*.jar", 1),
+      --     "\n"
+      --   )
+      -- )
 
       local config = {
         cmd = {

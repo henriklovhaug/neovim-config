@@ -86,12 +86,18 @@ M.mason = {
     -- java
     "jdtls",
     "google-java-format",
+    "java-test",
+    "vscode-java-decompiler",
+    "java-debug-adapter",
 
     --tailwindcss
     "tailwindcss-language-server",
 
     --latex
     "texlab",
+
+    --markdown
+    "glow",
   },
 }
 

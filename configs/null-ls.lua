@@ -18,11 +18,11 @@ local sources = {
   -- Lua
   b.formatting.stylua,
 
+  -- cpp
+  -- b.formatting.clang_format,
+
   -- Java
   b.formatting.google_java_format,
-
-  -- cpp
-  b.formatting.clang_format,
 
   -- rust
   b.formatting.rustfmt.with {
