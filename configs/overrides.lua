@@ -43,6 +43,8 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+    --tailwindcss
+    "tailwindcss-language-server",
 
     --python stuff
     "pyright",
@@ -89,9 +91,6 @@ M.mason = {
     "java-test",
     "vscode-java-decompiler",
     "java-debug-adapter",
-
-    --tailwindcss
-    "tailwindcss-language-server",
 
     --latex
     "texlab",
