@@ -91,12 +91,14 @@ M.mason = {
     "java-test",
     "vscode-java-decompiler",
     "java-debug-adapter",
+    "checkstyle",
 
     --latex
     "texlab",
 
     --markdown
     "glow",
+    "marksman",
   },
 }
 

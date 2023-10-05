@@ -7,17 +7,6 @@ M.general = {
   },
 }
 
-M.crates = {
-  n = {
-    ["<leader>rcu"] = {
-      function()
-        require("crates").update_all_crates()
-      end,
-      "update all crates",
-    },
-  },
-}
-
 M.rust = {
   n = {
     ["<leader>rha"] = {
@@ -25,6 +14,12 @@ M.rust = {
         require("rust-tools").hover_actions.hover_actions()
       end,
       "show hover actions",
+    },
+    ["<leader>rcu"] = {
+      function()
+        require("crates").update_all_crates()
+      end,
+      "update all crates",
     },
   },
 }
