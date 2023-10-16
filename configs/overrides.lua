@@ -99,6 +99,9 @@ M.mason = {
     --markdown
     "glow",
     "marksman",
+
+    --xml
+    "xmlformatter",
   },
 }
 

@@ -19,7 +19,9 @@ local sources = {
   b.formatting.stylua,
 
   -- cpp
-  -- b.formatting.clang_format,
+  b.formatting.clang_format.with {
+    filetypes = { "c", "cpp", "cuda", "objc", "objcpp" },
+  },
 
   -- Java
   b.formatting.google_java_format,
@@ -50,6 +52,9 @@ local sources = {
   b.diagnostics.mypy,
   b.diagnostics.ruff,
   b.formatting.black,
+
+  -- xml
+  b.formatting.xmlformat,
 }
 
 null_ls.setup {
