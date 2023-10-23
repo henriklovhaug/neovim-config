@@ -25,9 +25,6 @@ local sources = {
 
   -- Java
   b.formatting.google_java_format,
-  b.diagnostics.checkstyle.with {
-    extra_args = { "-c", "/google_checks.xml" }, -- or "/sun_checks.xml" or path to self written rules
-  },
 
   -- rust
   b.formatting.rustfmt.with {
