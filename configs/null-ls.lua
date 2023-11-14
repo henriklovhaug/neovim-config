@@ -19,9 +19,9 @@ local sources = {
   b.formatting.stylua,
 
   -- cpp
-  b.formatting.clang_format.with {
-    filetypes = { "c", "cpp", "cuda", "objc", "objcpp" },
-  },
+  -- b.formatting.clang_format.with {
+  --   filetypes = { "c", "cpp", "cuda", "objc", "objcpp" },
+  -- },
 
   -- Java
   b.formatting.google_java_format,
