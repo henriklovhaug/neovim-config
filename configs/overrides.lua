@@ -43,6 +43,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+    "htmx-lsp",
     --tailwindcss
     "tailwindcss-language-server",
 
@@ -93,15 +94,20 @@ M.mason = {
     "java-debug-adapter",
     "checkstyle",
 
-    --latex
+    -- latex
     "texlab",
 
-    --markdown
+    -- markdown
     "glow",
     "marksman",
 
-    --xml
+    -- xml
     "xmlformatter",
+
+    -- cli
+    "ast-grep",
+    "trivy",
+    "gitui",
   },
 }
 
