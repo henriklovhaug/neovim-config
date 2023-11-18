@@ -32,12 +32,12 @@ local sources = {
   },
 
   -- sql
-  b.diagnostics.sqlfluff.with {
-    extra_args = { "--dialect", "postgres" }, -- change to your dialect
-  },
-  b.formatting.sqlfluff.with {
-    extra_args = { "--dialect", "postgres" }, -- change to your dialect
-  },
+  -- b.diagnostics.sqlfluff.with {
+  --   extra_args = { "--dialect", "postgres" }, -- change to your dialect
+  -- },
+  -- b.formatting.sqlfluff.with {
+  --   extra_args = { "--dialect", "postgres" }, -- change to your dialect
+  -- },
 
   -- docker
   b.diagnostics.hadolint,
