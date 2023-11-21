@@ -13,13 +13,25 @@ M.rust = {
       function()
         require("rust-tools").hover_actions.hover_actions()
       end,
-      "show hover actions",
+      "Show hover actions",
     },
     ["<leader>rcu"] = {
       function()
         require("crates").update_all_crates()
       end,
-      "update all crates",
+      "Update all crates",
+    },
+    ["<leader>rcf"] = {
+      function()
+        require("crates").show_features_popup()
+      end,
+      "Show crate feature",
+    },
+    ["<leader>rcv"] = {
+      function()
+        require("crates").show_versions_popup()
+      end,
+      "Show crate versions",
     },
   },
 }

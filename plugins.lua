@@ -51,9 +51,13 @@ local plugins = {
     "saecki/crates.nvim",
     dependencies = "hrsh7th/nvim-cmp",
     ft = { "rust", "toml" },
-    config = function(_, opts)
+    config = function()
       local crate = require "crates"
-      crate.setup(opts)
+      crate.setup {
+        popup = {
+          autofocus = true,
+        },
+      }
       crate.show()
     end,
   },
@@ -80,7 +84,7 @@ local plugins = {
     "mfussenegger/nvim-dap-python",
     ft = { "python" },
     dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
-    config = function(_, opts)
+    config = function()
       local path = require("mason-registry").get_package("debugpy"):get_install_path() .. "/venv/bin/python"
       require("dap-python").setup(path)
     end,
