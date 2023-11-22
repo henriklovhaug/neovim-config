@@ -46,7 +46,12 @@ local sources = {
   b.formatting.latexindent,
 
   -- python
-  b.diagnostics.mypy,
+  b.diagnostics.mypy.with {
+    extra_args = function()
+      local virtual = os.getenv "VIRTUAL_ENV" or "/usr"
+      return { "--python-executable", virtual .. "/bin/python3" }
+    end,
+  },
   b.diagnostics.ruff,
   b.formatting.black,
 
