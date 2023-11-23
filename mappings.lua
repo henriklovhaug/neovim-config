@@ -4,7 +4,11 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["G"] = { "Gzz", "Goto line. Defaults to last" },
+    ["G"] = { "Gzz", "Goto line. Defaults to last", opts = { nowait = true } },
+    ["<leader>d"] = { [["_d]], "Delete without yanking" },
+  },
+  v = {
+    ["<leader>d"] = { [["_d]], "Delete without yanking" },
   },
 }
 
