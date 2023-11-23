@@ -22,6 +22,7 @@ M.treesitter = {
     "python",
     "json",
     "prisma",
+    "sql",
   },
   indent = {
     enable = true,
