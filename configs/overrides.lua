@@ -109,6 +109,9 @@ M.mason = {
     "ast-grep",
     "trivy",
     "gitui",
+
+    -- Pest
+    "pest-language-server",
   },
 }
 

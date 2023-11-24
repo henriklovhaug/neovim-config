@@ -17,6 +17,7 @@ local servers = {
   "prismals",
   "marksman",
   "htmx",
+  "pest_ls",
 }
 
 for _, lsp in ipairs(servers) do
