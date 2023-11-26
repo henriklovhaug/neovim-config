@@ -145,6 +145,14 @@ local plugins = {
     end,
   },
 
+  {
+    "pest-parser/pest.vim",
+    ft = { "pest" },
+    config = function()
+      require("pest-vim").setup {}
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

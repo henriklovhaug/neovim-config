@@ -6,6 +6,8 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["G"] = { "Gzz", "Goto line. Defaults to last", opts = { nowait = true } },
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
+    ["<leader>sv"] = { "<cmd> vsplit <CR>", "Split window" },
+    ["<leader>sh"] = { "<cmd> split <CR>", "Split window" },
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
