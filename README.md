@@ -1,5 +1,16 @@
 # Henrik custom configs
 
+<!--toc:start-->
+
+- [Henrik custom configs](#henrik-custom-configs)
+  - [Install guide](#install-guide)
+  - [Other extensions](#other-extensions)
+    - [Oatmeal](#oatmeal)
+    - [ZK](#zk)
+    - [Vale](#vale)
+
+<!--toc:end-->
+
 ## Install guide
 
 ```bash
@@ -10,6 +21,17 @@ nvim
 
 ## Other extensions
 
+### Oatmeal
+
 Some plugins will not work without other applications installed. Follow
 [Oatmeal](https://github.com/dustinblackman/oatmeal.nvim) guide in order to see
 what you need to run LLM inside NVIM
+
+### ZK
+
+Run `zk init` to create zk notebook
+
+### Vale
+
+Create a `.vale.ini` file to create writing rules for markdown, latex, and txt.
+Config generator can be found [here](https://vale.sh/generator)
