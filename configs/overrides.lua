@@ -101,6 +101,8 @@ M.mason = {
     -- markdown
     "glow",
     "marksman",
+    "vale",
+    "vale-ls",
 
     -- xml
     "xmlformatter",
