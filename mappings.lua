@@ -8,6 +8,13 @@ M.general = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
     ["<leader>sv"] = { "<cmd> vsplit <CR>", "Split window" },
     ["<leader>sh"] = { "<cmd> split <CR>", "Split window" },
+    ["<leader>h"] = {
+      function()
+        vim.lsp.buf.hover()
+      end,
+      "LSP hover",
+    },
+    ["K"] = { "k", "Move up one full line" },
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
