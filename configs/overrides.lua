@@ -1,3 +1,4 @@
+local cmp = require "cmp"
 local M = {}
 
 M.treesitter = {
@@ -137,6 +138,20 @@ M.nvimtree = {
       },
     },
   },
+}
+
+local A = require "plugins.configs.cmp"
+table.insert(A.sources, { name = "crates" })
+
+M.cmp = {
+  mapping = {
+    ["<CR>"] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = false,
+    },
+  },
+  sources = A.sources,
+  completion = { completeopt = "menu,menuone,noinsert,noselect" },
 }
 
 return M
