@@ -1,4 +1,4 @@
--- local autocmd = vim.api.nvim_create_autocmd
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
@@ -8,3 +8,8 @@
 --
 --
 require "custom.configs.set"
+
+autocmd("FileType", {
+  pattern = "markdown",
+  command = "set spell",
+})
