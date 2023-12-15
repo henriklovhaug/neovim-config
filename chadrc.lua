@@ -17,4 +17,9 @@ M.plugins = "custom.plugins"
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
+-- Disable virtual_text since it's redundant due to lsp_lines.
+vim.diagnostic.config {
+  virtual_text = false,
+}
+
 return M

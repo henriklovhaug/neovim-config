@@ -163,6 +163,17 @@ M.lspconfig = {
   },
 }
 
+M.diagnostic = {
+  n = {
+    ["<leader>ll"] = {
+      function()
+        require("lsp_lines").toggle()
+      end,
+      "Toggle lsp lines",
+    },
+  },
+}
+
 -- more keybinds!
 
 return M
