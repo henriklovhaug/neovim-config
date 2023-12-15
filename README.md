@@ -15,7 +15,7 @@
 
 ```bash
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 &&
-git clone https://github.com:henriklovhaug/neovim-config.git ~/.config/nvim/lua/custom/ --depth 1 &&
+git clone https://github.com:henriklovhaug/neovim-config.git ~/.config/nvim/lua/custom/ &&
 nvim
 ```
 
@@ -34,4 +34,5 @@ Run `zk init` to create zk notebook
 ### Vale
 
 Create a `.vale.ini` file to create writing rules for markdown, latex, and txt.
-Config generator can be found [here](https://vale.sh/generator)
+Config generator can be found [here](https://vale.sh/generator). Run `vale sync`
+to download selected grammar rules.
