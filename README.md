@@ -4,6 +4,7 @@
 
 - [Henrik custom configs](#henrik-custom-configs)
   - [Install guide](#install-guide)
+    - [Prerequisites](#prerequisites)
   - [Other extensions](#other-extensions)
     - [Oatmeal](#oatmeal)
     - [ZK](#zk)
@@ -18,6 +19,13 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 &&
 git clone https://github.com:henriklovhaug/neovim-config.git ~/.config/nvim/lua/custom/ &&
 nvim
 ```
+
+### Prerequisites
+
+- `ripgrep`
+- `python3`
+- `npm`
+- `rust`
 
 ## Other extensions
 
