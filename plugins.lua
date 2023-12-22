@@ -25,13 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = {
-      overrides.mason,
-      registries = {
-        "github:nvim-java/mason-registry",
-        "github:mason-org/mason-registry",
-      },
-    },
+    opts = overrides.mason,
   },
 
   {

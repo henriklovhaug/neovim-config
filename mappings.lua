@@ -15,6 +15,12 @@ M.general = {
       "LSP hover",
     },
     ["K"] = { "k", "Move up one full line" },
+    ["<leader>qb"] = {
+      function()
+        require("nvchad.tabufline").closeAllBufs()
+      end,
+      "Close all buffers",
+    },
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
