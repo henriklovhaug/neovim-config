@@ -169,6 +169,25 @@ M.lspconfig = {
   },
 }
 
+M.oatmeal = {
+  n = {
+    ["<leader>om"] = {
+      function()
+        require("oatmeal").start()
+      end,
+      "Start oatmeal",
+    },
+  },
+  v = {
+    ["<leader>om"] = {
+      function()
+        require("oatmeal").start()
+      end,
+      "Start oatmeal",
+    },
+  },
+}
+
 -- more keybinds!
 
 return M
