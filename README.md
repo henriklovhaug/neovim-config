@@ -26,6 +26,7 @@ nvim
 - `python3`
 - `npm`
 - `rust`
+- `cmake`
 
 ## Other extensions
 
