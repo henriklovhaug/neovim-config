@@ -54,7 +54,7 @@ M.mason = {
     "pyright",
     "mypy",
     "ruff",
-    "black",
+    "blue",
     "debugpy",
 
     -- c/cpp stuff

@@ -53,7 +53,7 @@ local sources = {
     end,
   },
   b.diagnostics.ruff,
-  b.formatting.black,
+  b.formatting.blue,
 
   -- xml
   b.formatting.xmlformat,
