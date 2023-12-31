@@ -14,6 +14,21 @@ local spec = {
       server = {
         on_attach = on_attach,
         capabilities = capabilities,
+
+        settings = {
+          ["rust-analyzer"] = {
+            -- Other Settings ...
+            procMacro = {
+              ignored = {
+                leptos_macro = {
+                  -- optional: --
+                  -- "component",
+                  "server",
+                },
+              },
+            },
+          },
+        },
       },
     }
   end,

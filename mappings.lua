@@ -21,6 +21,7 @@ M.general = {
       end,
       "Close all buffers",
     },
+    ["<leader>qa"] = { "<cmd> qa <CR>", "Quit NeoVim" },
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
