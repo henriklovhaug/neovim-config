@@ -57,6 +57,9 @@ local sources = {
 
   -- xml
   b.formatting.xmlformat,
+
+  -- shell
+  b.formatting.beautysh,
 }
 
 null_ls.setup {

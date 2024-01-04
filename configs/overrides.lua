@@ -63,6 +63,7 @@ M.mason = {
 
     -- rust
     "rust-analyzer",
+    "codelldb",
 
     -- svelte
     "svelte-language-server",
@@ -114,6 +115,9 @@ M.mason = {
     "trivy",
     "gitui",
     "zk",
+
+    -- shell
+    "beautysh",
 
     -- Pest
     "pest-language-server",
