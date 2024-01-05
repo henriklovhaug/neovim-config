@@ -14,7 +14,18 @@ M.general = {
       end,
       "LSP hover",
     },
-    ["K"] = { "k", "Move up one full line" },
+    -- Implement when the plugin works
+    -- ["<leader>ca"] = {
+    --   function()
+    --     if vim.bo.filetype == "rust" then
+    --       vim.cmd.RustLsp "codeAction"
+    --     else
+    --       vim.lsp.buf.code_action()
+    --     end
+    --   end,
+    --   "LSP code action",
+    -- },
+    -- ["K"] = { "k", "Move up one full line" },
     ["<leader>qb"] = {
       function()
         require("nvchad.tabufline").closeAllBufs()
