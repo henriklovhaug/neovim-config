@@ -1,5 +1,5 @@
 local spec = {
-  "mickael-menu/zk-nvim",
+  "zk-org/zk-nvim",
   ft = { "markdown" },
   config = function()
     require("zk").setup {}
