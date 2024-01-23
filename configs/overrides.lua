@@ -12,6 +12,7 @@ M.treesitter = {
     "typescript",
     "tsx",
     "c",
+    "cpp",
     "markdown",
     "markdown_inline",
     "rust",
@@ -25,6 +26,7 @@ M.treesitter = {
     "prisma",
     "sql",
     "regex",
+    "kotlin",
   },
   indent = {
     enable = true,

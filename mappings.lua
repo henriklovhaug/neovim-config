@@ -31,9 +31,9 @@ M.general = {
       function()
         require("nvchad.tabufline").closeAllBufs()
       end,
+      opts = { nowait = true },
       "Close all buffers",
     },
-    ["<leader>qa"] = { "<cmd> qa <CR>", "Quit NeoVim" },
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
