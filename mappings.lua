@@ -164,15 +164,6 @@ M.nvim = {
   },
 }
 
-M.db = {
-  n = {
-    ["<leader>tu"] = {
-      "<cmd>DBUIToggle<CR>",
-      "Toggle db ui",
-    },
-  },
-}
-
 M.lspconfig = {
   n = {
     ["<leader>ca"] = {

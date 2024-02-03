@@ -38,15 +38,6 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- Install a plugin
-  {
-    "max397574/better-escape.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
-
   {
     "saecki/crates.nvim",
     dependencies = "hrsh7th/nvim-cmp",
@@ -128,16 +119,6 @@ local plugins = {
       require("oatmeal").setup {
         backend = "ollama",
         model = "llama2:13b",
-      }
-    end,
-  },
-
-  {
-    "jim-fx/sudoku.nvim",
-    cmd = "Sudoku",
-    config = function()
-      require("sudoku").setup {
-        -- configuration ...
       }
     end,
   },
