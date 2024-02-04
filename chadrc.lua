@@ -8,6 +8,11 @@ M.ui = {
   hl_override = highlights.override,
   hl_add = highlights.add,
   transparency = true,
+  statusline = {
+    overriden_modules = function(modules)
+      table.remove(modules, 5)
+    end,
+  },
 }
 
 M.plugins = "custom.plugins"
