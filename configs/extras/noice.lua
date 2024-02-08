@@ -12,10 +12,6 @@ local spec = {
         },
         opts = { skip = true },
       },
-      {
-        view = "notify",
-        filter = { event = "msg_showmode" },
-      },
     },
     presets = {
       lsp_doc_border = true,
