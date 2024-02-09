@@ -39,6 +39,11 @@ local plugins = {
   },
 
   {
+    "nvim-telescope/telescope.nvim",
+    opts = overrides.telescope,
+  },
+
+  {
     "saecki/crates.nvim",
     dependencies = "hrsh7th/nvim-cmp",
     ft = { "rust", "toml" },
@@ -129,6 +134,11 @@ local plugins = {
     config = function()
       require("pest-vim").setup {}
     end,
+  },
+
+  {
+    "ludovicchabant/vim-gutentags",
+    lazy = false,
   },
 
   -- To make a plugin not be loaded

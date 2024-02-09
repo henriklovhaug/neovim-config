@@ -148,6 +148,12 @@ M.nvimtree = {
   },
 }
 
+M.telescope = {
+  defaults = {
+    generic_sorter = require("telescope.sorters").get_fzy_sorter,
+  },
+}
+
 local A = require "plugins.configs.cmp"
 table.insert(A.sources, { name = "crates" })
 

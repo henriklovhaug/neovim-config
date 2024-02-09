@@ -152,6 +152,11 @@ M.telescope = {
       end,
       "Find references",
     },
+    ["<leader>ft"] = {
+      function()
+        require("telescope.builtin").tags { only_sort_tags = true }
+      end,
+    },
   },
 }
 
