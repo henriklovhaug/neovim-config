@@ -8,7 +8,6 @@
   - [Other extensions](#other-extensions)
     - [Oatmeal](#oatmeal)
     - [ZK](#zk)
-    - [Vale](#vale)
 
 <!--toc:end-->
 
@@ -38,10 +37,3 @@ need to run a LLM inside NVIM
 ### ZK
 
 Run `zk init` to create zk notebook
-
-### Vale
-
-Create a `.vale.ini` file in you `$HOME` directory to create writing rules for
-markdown, latex, and txt. Config generator can be found
-[here](https://vale.sh/generator). Run `vale sync` to download selected grammar
-rules.
