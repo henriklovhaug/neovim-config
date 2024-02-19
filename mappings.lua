@@ -22,6 +22,11 @@ M.general = {
       opts = { nowait = true },
       "Close all buffers",
     },
+    ["<leader>fm"] = {
+      "<cmd>Format<CR>",
+      no_wait = true,
+      "LSP formatting",
+    },
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
@@ -165,11 +170,6 @@ M.lspconfig = {
       end,
       no_wait = true,
       "LSP code action",
-    },
-    ["<leader>fm"] = {
-      "<cmd>Format<CR>",
-      no_wait = true,
-      "LSP formatting",
     },
   },
 }
