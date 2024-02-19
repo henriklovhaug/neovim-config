@@ -141,6 +141,10 @@ local plugins = {
     lazy = false,
   },
 
+  {
+    "aznhe21/actions-preview.nvim",
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

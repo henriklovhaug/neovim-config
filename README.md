@@ -25,6 +25,7 @@ git clone https://github.com/henriklovhaug/neovim-config.git ~/.config/nvim/lua/
 - `npm`
 - `rust`
 - `cmake`
+- A nerd font. You can find them [here](https://www.nerdfonts.com)
 
 ## Other extensions
 

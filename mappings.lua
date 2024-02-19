@@ -172,8 +172,11 @@ M.nvim = {
 M.lspconfig = {
   n = {
     ["<leader>ca"] = {
-      "<cmd>CodeActionMenu<CR>",
-      "Code action",
+      function()
+        require("actions-preview").code_actions()
+      end,
+      no_wait = true,
+      "LSP code action",
     },
   },
 }
