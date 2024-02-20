@@ -7,7 +7,7 @@ local spec = {
       python = { "blue" },
       -- Use a sub-list to run only the first available formatter
       javascript = { { "prettierd" } },
-      markdown = { { "prettierd" } },
+      markdown = { "deno_fmt" },
       html = { { "prettierd" } },
       css = { { "prettierd" } },
       svelte = { { "prettierd" } },

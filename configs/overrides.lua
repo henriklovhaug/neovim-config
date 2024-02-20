@@ -48,6 +48,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettierd",
+    "prettier",
     "htmx-lsp",
     --tailwindcss
     "tailwindcss-language-server",
