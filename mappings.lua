@@ -30,6 +30,11 @@ M.general = {
   },
   v = {
     ["<leader>d"] = { [["_d]], "Delete without yanking" },
+    ["<leader>fm"] = {
+      "<cmd>Format<CR>",
+      no_wait = true,
+      "LSP formatting",
+    },
   },
 }
 
