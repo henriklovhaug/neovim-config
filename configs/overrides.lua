@@ -107,6 +107,7 @@ M.mason = {
     -- markdown
     "glow",
     "marksman",
+    "ltex-ls",
 
     -- xml
     "xmlformatter",
