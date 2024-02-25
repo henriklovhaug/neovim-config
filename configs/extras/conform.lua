@@ -4,7 +4,7 @@ local spec = {
     formatters_by_ft = {
       lua = { "stylua" },
       -- Conform will run multiple formatters sequentially
-      python = { "blue" },
+      python = { "black" },
       -- Use a sub-list to run only the first available formatter
       javascript = { { "prettierd" } },
       markdown = { "deno_fmt" },

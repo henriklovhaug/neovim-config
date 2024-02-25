@@ -1,11 +1,15 @@
--- local spec = {
---   "mrcjkb/rustaceanvim",
---   version = "^3", -- Recommended
---   ft = { "rust" },
--- }
-
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
+
+-- local spec = {
+--   "mrcjkb/rustaceanvim",
+--   version = "^4", -- Recommended
+--   ft = { "rust" },
+--   dependencies = {
+--     "neovim/nvim-lspconfig",
+--   },
+-- }
+
 
 local spec = {
   "simrat39/rust-tools.nvim",

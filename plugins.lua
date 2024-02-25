@@ -132,6 +132,12 @@ local plugins = {
     "aznhe21/actions-preview.nvim",
   },
 
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

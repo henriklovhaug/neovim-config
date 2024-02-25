@@ -40,12 +40,6 @@ M.general = {
 
 M.rust = {
   n = {
-    ["<leader>rha"] = {
-      function()
-        require("rust-tools").hover_actions.hover_actions()
-      end,
-      "Show hover actions",
-    },
     ["<leader>rcu"] = {
       function()
         require("crates").update_all_crates()
