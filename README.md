@@ -2,7 +2,7 @@
 
 <!--toc:start-->
 
-- [Henrik custom configs](#henrik-custom-configs)
+- [Henrik's custom configs](#henriks-custom-configs)
   - [Install guide](#install-guide)
     - [Prerequisites](#prerequisites)
   - [Other extensions](#other-extensions)
