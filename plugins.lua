@@ -135,7 +135,18 @@ local plugins = {
   {
     "mistricky/codesnap.nvim",
     build = "make",
-    lazy = false,
+    lazy = true,
+    cmd = { "CodeSnapPreviewOn" },
+    config = function(_, opts)
+      require("codesnap").setup(opts)
+    end,
+  },
+
+  {
+    "zeioth/garbage-day.nvim",
+    dependencies = "neovim/nvim-lspconfig",
+    event = "VeryLazy",
+    opts = {},
   },
 
   -- To make a plugin not be loaded

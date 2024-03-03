@@ -12,6 +12,10 @@ cmd("Update", function()
   require "nvchad.updater"()
 end, {})
 
+cmd("Qa", function()
+  vim.cmd "qa"
+end, {})
+
 cmd("Format", function(args)
   local range = nil
   if args.count ~= -1 then
