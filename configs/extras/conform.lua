@@ -29,6 +29,8 @@ local spec = {
       cuda = { "clang-format" },
 
       xml = { "xmlformat" },
+
+      sql = { "sqlfmt" },
     },
   },
 }

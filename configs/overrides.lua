@@ -77,9 +77,9 @@ M.mason = {
     "hadolint",
 
     -- sql
-    "sqlfluff",
     "sqls",
     "prisma-language-server",
+    "sqlfmt",
 
     -- go
     "gopls",
