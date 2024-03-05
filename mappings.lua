@@ -24,7 +24,7 @@ M.general = {
     },
     ["<leader>fm"] = {
       "<cmd>Format<CR>",
-      no_wait = true,
+      opts = { nowait = true },
       "LSP formatting",
     },
   },
