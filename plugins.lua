@@ -110,7 +110,7 @@ local plugins = {
     config = function()
       require("oatmeal").setup {
         backend = "ollama",
-        model = "gemma",
+        model = "gemma:latest",
       }
     end,
   },
