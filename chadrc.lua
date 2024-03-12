@@ -31,4 +31,22 @@ M.plugins = "custom.plugins"
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
+local lazy_plugs = require "plugins.configs.lazy_nvim"
+--
+local disabled_plugins = lazy_plugs.performance.rtp.disabled_plugins
+
+for k, v in pairs(disabled_plugins) do
+  if v == "zip" or v == "zipPlugin" or v == "gzip" or v == "tar" or v == "tarPlugin" then
+    disabled_plugins[k] = nil
+  end
+end
+
+M.lazy_nvim = {
+  performance = {
+    rtp = {
+      disabled_plugins = disabled_plugins,
+    },
+  },
+}
+
 return M
