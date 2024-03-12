@@ -14,6 +14,7 @@ local spec = {
       scss = { { "prettierd" } },
       yaml = { { "prettierd" } },
       toml = { { "prettierd" } },
+      json = { { "prettierd" } },
 
       rust = { "rustfmt" },
 
