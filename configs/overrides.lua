@@ -108,6 +108,7 @@ M.mason = {
     "glow",
     "marksman",
     "ltex-ls",
+    "harper-ls",
 
     -- xml
     "xmlformatter",
