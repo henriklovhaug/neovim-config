@@ -11,6 +11,9 @@
 
 <!--toc:end-->
 
+> [!IMPORTANT]
+> Currently not working
+
 ## Install guide
 
 ```bash
