@@ -27,6 +27,7 @@ M.treesitter = {
     "sql",
     "regex",
     "kotlin",
+    "ron",
   },
   indent = {
     enable = true,
