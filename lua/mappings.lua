@@ -6,9 +6,7 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
-map("n", "<leader>fm", function()
-	require("conform").format()
-end, { desc = "File Format with conform" })
+map("n", "<leader>fm", "<cmd>Format<CR>", { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map("n", ",", ":", { desc = "Enter command mode" })
@@ -37,3 +35,29 @@ end, { desc = "Find references" })
 map("n", "<leader>h", function()
 	vim.lsp.buf.hover()
 end, { desc = "Show hover" })
+
+map("n", "<leader>qb", function()
+	require("nvchad.tabufline").closeAllBufs()
+end, { desc = "Close all buffers" })
+
+map("n", "<leader>rcu", function()
+	require("crates").update_all_crates()
+end, { desc = "Update all crates" })
+
+map("n", "<leader>rcv", function()
+	require("crates").show_versions_popup()
+end, { desc = "Show create version" })
+
+map("n", "<leader>rcf", function()
+	require("crates").show_features_popup()
+end, { desc = "Show crate feature" })
+
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle breakpoint" })
+
+map("n", "<leader>djn", function()
+	require("jdtls").test_nearest_method()
+end, { desc = "Test nearest method" })
+
+map("n", "<leader>djc", function()
+	require("jdtls").test_class()
+end, { desc = "Test class" })
