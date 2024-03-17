@@ -5,3 +5,8 @@ require("nvchad.options")
 local o = vim.opt
 
 o.termguicolors = true
+o.scrolloff = 8
+o.smartindent = true
+
+o.hlsearch = false
+o.incsearch = true

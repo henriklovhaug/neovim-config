@@ -13,14 +13,8 @@ map("n", ",", ":", { desc = "Enter command mode" })
 map("n", "G", "Gzz", { desc = "Go to end of file" })
 map("n", "T", "Gzt", { desc = "Go to end of file" })
 
-map("n", "<leader>ca", function()
-	require("actions-preview").code_actions()
-end, { desc = "Code Actions" })
 
-map("n", "<leader>om", function()
-	require("oatmeal").start()
-end, { desc = "Oatmeal" })
-map("v", "<leader>om", function()
+map({ "n", "v" }, "<leader>om", function()
 	require("oatmeal").start()
 end, { desc = "Oatmeal" })
 

@@ -14,12 +14,15 @@ M.ui = {
 	transparency = true,
 
 	statusline = {
-		order = { "mode", "file", "git", "%=", "req", "%=", "cwd", "cursor" },
+		order = { "mode", "file", "git", "%=", "req", "%=", "diagnostics", "lsp", "cwd", "cursor" },
 		modules = {
 			req = function()
 				return recording()
 			end,
 		},
+	},
+	lsp = {
+		signature = false,
 	},
 }
 

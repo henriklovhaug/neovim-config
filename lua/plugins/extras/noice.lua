@@ -16,15 +16,6 @@ local spec = {
 		presets = {
 			lsp_doc_border = true,
 		},
-
-		lsp = {
-			hover = {
-				enabled = false,
-			},
-			signature = {
-				enabled = false,
-			},
-		},
 	},
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
