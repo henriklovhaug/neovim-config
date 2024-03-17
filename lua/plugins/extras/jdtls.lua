@@ -16,10 +16,10 @@ return {
     ft = "java",
     config = function()
       local on_attach = function(client, bufnr)
-        require("plugins.configs.lspconfig").on_attach(client, bufnr)
+        require("nvchad.configs.lspconfig").on_attach(client, bufnr)
       end
 
-      local capabilities = require("plugins.configs.lspconfig").capabilities
+      local capabilities = require("nvchad.configs.lspconfig").capabilities
       local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
       -- calculate workspace dir
       local workspace_dir = vim.fn.stdpath "data" .. "/site/java/workspace-root/" .. project_name
