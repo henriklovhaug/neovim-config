@@ -13,10 +13,10 @@ local capabilities = lspconfig.capabilities
 -- }
 
 local my_attach = function(client, bufnr)
-  on_attach(client, bufnr)
-  vim.keymap.set({ "n", "v" }, "<leader>ca", function()
-    require("actions-preview").code_actions()
-  end, {desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
+	on_attach(client, bufnr)
+	vim.keymap.set({ "n", "v" }, "<leader>ca", function()
+		require("actions-preview").code_actions()
+	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
 end
 
 local spec = {
