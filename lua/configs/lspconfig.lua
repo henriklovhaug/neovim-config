@@ -10,7 +10,7 @@ local my_attach = function(client, bufnr)
 	on_attach(client, bufnr)
 	vim.keymap.set({ "n", "v" }, "<leader>ca", function()
 		require("actions-preview").code_actions()
-	end, { desc = "Code actions", noremap = true, silent = true })
+	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
 end
 
 -- if you just want default config for the servers then put them in a table
@@ -49,7 +49,7 @@ local function organize_imports()
 end
 
 lspconfig.tsserver.setup({
-	on_attach = on_attach,
+	on_attach = my_attach,
 	capabilities = capabilities,
 	commands = {
 		OrganizeImports = {

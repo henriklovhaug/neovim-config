@@ -11,9 +11,6 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			vim.notify = require("noice").notify
-			vim.lsp.handlers["textDocument/hover"] = require("noice").hover
-			vim.lsp.handlers["textDocument/signatureHelp"] = require("noice").signature
 			require("nvchad.configs.lspconfig").defaults()
 			require("configs.lspconfig")
 		end,
@@ -112,10 +109,10 @@ return {
 	{
 		"mistricky/codesnap.nvim",
 		build = "make",
-		lazy = true,
-		cmd = { "CodeSnapPreviewOn" },
-		config = function(_, opts)
-			require("codesnap").setup(opts)
+		config = function()
+			require("codesnap").setup({
+				watermark = "",
+			})
 		end,
 	},
 
