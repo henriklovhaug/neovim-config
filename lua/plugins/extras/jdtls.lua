@@ -19,7 +19,7 @@ return {
 				require("nvchad.configs.lspconfig").on_attach(client, bufnr)
 				vim.keymap.nnoremap({ "n", "v" }, "<leader>ca", function()
 					require("actions-preview").code_actions()
-				end, { noremap = true, desc = "Code actions"})
+				end, { noremap = true, desc = "Code actions", bufnr = bufnr, silent = true })
 			end
 
 			local capabilities = require("nvchad.configs.lspconfig").capabilities
