@@ -24,6 +24,10 @@ M.ui = {
 	lsp = {
 		signature = false,
 	},
+
+	tabufline = {
+		order = { "treeOffset", "buffers", "tabs" },
+	},
 }
 
 return M

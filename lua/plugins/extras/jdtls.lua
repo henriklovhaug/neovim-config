@@ -1,4 +1,11 @@
 -- java lsp
+local my_attach = function(client, bufnr)
+	require("nvchad.configs.lspconfig").on_attach(client, bufnr)
+	vim.keymap.set({ "n", "v" }, "<leader>ca", function()
+		require("actions-preview").code_actions()
+	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
+end
+
 return {
 	{
 		"neovim/nvim-lspconfig",
@@ -15,13 +22,6 @@ return {
 		"mfussenegger/nvim-jdtls",
 		ft = "java",
 		config = function()
-			local on_attach = function(client, bufnr)
-				require("nvchad.configs.lspconfig").on_attach(client, bufnr)
-				vim.keymap.nnoremap({ "n", "v" }, "<leader>ca", function()
-					require("actions-preview").code_actions()
-				end, { noremap = true, desc = "Code actions", bufnr = bufnr, silent = true })
-			end
-
 			local capabilities = require("nvchad.configs.lspconfig").capabilities
 			local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 			-- calculate workspace dir
@@ -56,7 +56,7 @@ return {
 					"-data",
 					workspace_dir,
 				},
-				on_attach = on_attach,
+				on_attach = my_attach,
 				capabilities = capabilities,
 				root_dir = vim.fs.dirname(
 					vim.fs.find({ ".gradlew", ".git", "mvnw", "pom.xml", "build.gradle" }, { upward = true })[1]
