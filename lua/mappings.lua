@@ -8,6 +8,9 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map({ "n", "v" }, "<leader>fm", "<cmd>Format<CR>", { desc = "File Format with conform" })
 
+map({"n", "v"}, "j", "gj", { desc = "Move down visual line" })
+map({"n", "v"}, "k", "gk", { desc = "Move up visual line" })
+
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map({ "n", "v" }, ",", ":", { desc = "Enter command mode" })
 map("n", "G", "Gzz", { desc = "Go to end of file" })
