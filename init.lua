@@ -32,6 +32,10 @@ cmd("Format", function(args)
 	require("conform").format({ async = true, lsp_fallback = true, range = range })
 end, { range = true })
 
+cmd("Update", function()
+	require("lazy").update()
+end, {})
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
