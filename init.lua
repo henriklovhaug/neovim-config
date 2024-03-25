@@ -8,6 +8,10 @@ vim.g.gutentags_file_list_command = "rg --files"
 vim.g.gutentags_generate_on_new = 1
 vim.g.gutentags_project_root = { "go.mod", ".git", ".tags" }
 
+vim.diagnostic.config({
+	update_in_insert = false,
+})
+
 local autocmd = vim.api.nvim_create_autocmd
 local cmd = vim.api.nvim_create_user_command
 

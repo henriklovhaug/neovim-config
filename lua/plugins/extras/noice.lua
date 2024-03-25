@@ -7,6 +7,12 @@ local spec = {
 		routes = {
 			{
 				filter = {
+					find = "Linting...",
+				},
+				opts = { skip = true },
+			},
+			{
+				filter = {
 					event = "msg_show",
 					kind = "",
 				},
@@ -15,6 +21,13 @@ local spec = {
 		},
 		presets = {
 			lsp_doc_border = true,
+		},
+		lsp = {
+			override = {
+				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+				["vim.lsp.util.stylize_markdown"] = true,
+				["cmp.entry.get_documentation"] = true,
+			},
 		},
 	},
 	dependencies = {

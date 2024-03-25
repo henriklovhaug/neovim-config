@@ -15,6 +15,7 @@ end
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
+  "lua_ls",
 	"html",
 	"cssls",
 	"tsserver",
@@ -27,7 +28,8 @@ local servers = {
 	"prismals",
 	"marksman",
 	"htmx",
-	"ltex",
+	-- "ltex",
+	"harper_ls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -55,6 +57,17 @@ lspconfig.tsserver.setup({
 		OrganizeImports = {
 			organize_imports,
 			description = "Organize Imports",
+		},
+	},
+})
+
+lspconfig.harper_ls.setup({
+	settings = {
+		["harper-ls"] = {
+			diagnosticSeverity = "hint", -- Can also be "information", "warning", or "error"
+			linters = {
+				sentence_capitalization = false,
+			},
 		},
 	},
 })
