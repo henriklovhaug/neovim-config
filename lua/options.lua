@@ -10,3 +10,7 @@ o.smartindent = true
 
 o.hlsearch = false
 o.incsearch = true
+
+vim.diagnostic.config({
+	update_in_insert = false,
+})
