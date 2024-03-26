@@ -16,6 +16,8 @@ local options = {
 		toml = { { "prettierd" } },
 		json = { { "prettierd" } },
 
+		latex = { "latexindent" },
+
 		rust = { "rustfmt" },
 
 		java = { "google-java-format" },

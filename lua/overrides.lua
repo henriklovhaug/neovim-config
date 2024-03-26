@@ -103,6 +103,7 @@ M.mason = {
 
 		-- latex
 		"texlab",
+    "latexindent",
 
 		-- markdown
 		"glow",
