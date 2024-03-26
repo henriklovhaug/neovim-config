@@ -36,6 +36,21 @@ return {
 		opts = overrides.telescope,
 	},
 
+  {
+    "saecki/crates.nvim",
+    dependencies = "hrsh7th/nvim-cmp",
+    ft = { "rust", "toml" },
+    config = function()
+      local crate = require "crates"
+      crate.setup {
+        popup = {
+          autofocus = true,
+        },
+      }
+      crate.show()
+    end,
+  },
+
 	{
 		"hrsh7th/nvim-cmp",
 		opts = overrides.cmp,
