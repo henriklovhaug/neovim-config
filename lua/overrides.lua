@@ -137,7 +137,7 @@ M.nvimtree = {
 	view = {
 		adaptive_size = true,
 		-- To be decided
-		-- side = "right",
+		side = "right",
 	},
 
 	renderer = {
@@ -161,7 +161,6 @@ local cmp = require("cmp")
 table.insert(A.sources, { name = "crates" })
 
 M.cmp = {
-	-- preselect = cmp.PreselectMode.None,
 	mapping = {
 		["<CR>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
