@@ -137,7 +137,7 @@ M.nvimtree = {
 	view = {
 		adaptive_size = true,
 		-- To be decided
-		side = "right",
+		-- side = "right",
 	},
 
 	renderer = {
