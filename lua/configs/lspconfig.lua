@@ -15,20 +15,20 @@ end
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "lua_ls",
+	"lua_ls",
 	"html",
 	"cssls",
 	"tsserver",
 	"clangd",
 	"svelte",
 	"dockerls",
+	"docker_compose_language_service",
 	"tailwindcss",
 	"texlab",
 	"pyright",
 	"prismals",
 	"marksman",
 	"htmx",
-	-- "ltex",
 	"harper_ls",
 }
 
@@ -40,7 +40,6 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
--- lspconfig.pyright.setup { blabla}
 local function organize_imports()
 	local params = {
 		command = "_typescript.organizeImports",

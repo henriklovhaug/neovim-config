@@ -36,20 +36,20 @@ return {
 		opts = overrides.telescope,
 	},
 
-  {
-    "saecki/crates.nvim",
-    dependencies = "hrsh7th/nvim-cmp",
-    ft = { "rust", "toml" },
-    config = function()
-      local crate = require "crates"
-      crate.setup {
-        popup = {
-          autofocus = true,
-        },
-      }
-      crate.show()
-    end,
-  },
+	{
+		"saecki/crates.nvim",
+		dependencies = "hrsh7th/nvim-cmp",
+		ft = { "rust", "toml" },
+		config = function()
+			local crate = require("crates")
+			crate.setup({
+				popup = {
+					autofocus = true,
+				},
+			})
+			crate.show()
+		end,
+	},
 
 	{
 		"hrsh7th/nvim-cmp",
@@ -132,13 +132,6 @@ return {
 				watermark = "",
 			})
 		end,
-	},
-
-	{
-		"zeioth/garbage-day.nvim",
-		dependencies = "neovim/nvim-lspconfig",
-		event = "VeryLazy",
-		opts = {},
 	},
 
 	{ import = "plugins.extras" },
