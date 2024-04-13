@@ -32,7 +32,7 @@ dap.adapters.codelldb = {
 	port = "${port}",
 	executable = {
 		-- CHANGE THIS to your path!
-		command = "/Users/henrik/.local/share/nvim/mason/packages/codelldb/codelldb",
+		command = vim.fn.system("which codelldb"):gsub("\n", ""),
 		args = { "--port", "${port}" },
 	},
 }
