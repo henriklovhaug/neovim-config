@@ -52,6 +52,7 @@ end
 lspconfig.tsserver.setup({
 	on_attach = my_attach,
 	capabilities = capabilities,
+	on_init = on_init,
 	commands = {
 		OrganizeImports = {
 			organize_imports,

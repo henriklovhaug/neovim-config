@@ -23,6 +23,7 @@ return {
 		ft = "java",
 		config = function()
 			local capabilities = require("nvchad.configs.lspconfig").capabilities
+			local on_init = require("nvchad.configs.lspconfig").on_init
 			local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 			-- calculate workspace dir
 			local workspace_dir = vim.fn.stdpath("data") .. "/site/java/workspace-root/" .. project_name
@@ -58,6 +59,7 @@ return {
 				},
 				on_attach = my_attach,
 				capabilities = capabilities,
+				on_init = on_init,
 				root_dir = vim.fs.dirname(
 					vim.fs.find({ ".gradlew", ".git", "mvnw", "pom.xml", "build.gradle" }, { upward = true })[1]
 				),
