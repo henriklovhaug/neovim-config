@@ -1,4 +1,5 @@
 require("nvchad.mappings")
+local dap = require("dap")
 
 -- add yours here
 
@@ -48,7 +49,7 @@ map("n", "<leader>rcf", function()
 	require("crates").show_features_popup()
 end, { desc = "Show crate feature" })
 
-map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle breakpoint" })
+map("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
 
 map("n", "<leader>djn", function()
 	require("jdtls").test_nearest_method()

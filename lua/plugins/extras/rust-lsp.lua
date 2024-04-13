@@ -49,8 +49,6 @@ vim.g.rustaceanvim = {
 			["rust-analyzer"] = {},
 		},
 	},
-	-- DAP configuration
-	dap = {},
 }
 
 return spec
