@@ -10,14 +10,30 @@ local spec = {
 	ft = { "rust" },
 	dependencies = {
 		"neovim/nvim-lspconfig",
+		{
+			"lvimuser/lsp-inlayhints.nvim",
+			opts = {},
+		},
 	},
 }
 
+local map = vim.keymap.set
+
 local my_attach = function(client, bufnr)
 	on_attach(client, bufnr)
-	vim.keymap.set({ "n", "v" }, "<leader>ca", function()
+	require("lsp-inlayhints").on_attach(client, bufnr)
+
+	map({ "n", "v" }, "<leader>ca", function()
 		require("actions-preview").code_actions()
 	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
+
+	map({ "n" }, "<leader>rb", function()
+		vim.cmd.RustLsp("rebuildProcMacros")
+	end, { desc = "Rebuild proc macros" })
+
+	map({ "n" }, "<leader>r", function()
+		vim.cmd.RustLsp("expandMacro")
+	end, { desc = "Expand macro" })
 end
 
 vim.g.rustaceanvim = {
