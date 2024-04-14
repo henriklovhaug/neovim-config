@@ -71,7 +71,6 @@ return {
 		end,
 	},
 
-
 	{
 		"dustinblackman/oatmeal.nvim",
 		cmd = { "Oatmeal" },
@@ -111,5 +110,5 @@ return {
 		end,
 	},
 
-	{ import = "plugins.extras" },
+	{ import = "plugins.other" },
 }
