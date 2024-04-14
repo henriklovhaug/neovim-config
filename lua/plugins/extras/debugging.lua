@@ -1,3 +1,5 @@
+local map = vim.keymap.set
+
 local spec = {
 	"mfussenegger/nvim-dap",
 	dependencies = { "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio" },
@@ -15,6 +17,8 @@ local spec = {
 		dap.listeners.before.event_exited["dapui_config"] = function()
 			dapui.close()
 		end
+
+		map("n", "<leader>dq", dapui.close, { desc = "Close the UI" })
 	end,
 }
 
