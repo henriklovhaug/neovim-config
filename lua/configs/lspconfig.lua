@@ -15,21 +15,22 @@ end
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-	"lua_ls",
-	"html",
-	"cssls",
-	"tsserver",
 	"clangd",
-	"svelte",
+	"cssls",
 	"dockerls",
 	"docker_compose_language_service",
+	"gopls",
+	"harper_ls",
+	"html",
+	"htmx",
+	"lua_ls",
+	"marksman",
 	"tailwindcss",
 	"texlab",
+	"tsserver",
 	"pyright",
 	"prismals",
-	"marksman",
-	"htmx",
-	"harper_ls",
+	"svelte",
 }
 
 for _, lsp in ipairs(servers) do
@@ -68,6 +69,24 @@ lspconfig.harper_ls.setup({
 			linters = {
 				sentence_capitalization = false,
 			},
+		},
+	},
+})
+
+lspconfig.gopls.setup({
+	on_attach = my_attach,
+	capabilities = capabilities,
+	on_init = on_init,
+	cmd = { "gopls" },
+	root_dir = lspconfig.util.root_pattern("go.mod", ".git", "go.work"),
+	settings = {
+		gopls = {
+			completeUnimported = true,
+      usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
 		},
 	},
 })
