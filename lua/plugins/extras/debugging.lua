@@ -44,4 +44,7 @@ dap.configurations.rust = {
 	},
 }
 
+dap.configurations.c = dap.configurations.rust
+dap.configurations.cpp = dap.configurations.rust
+
 return spec
