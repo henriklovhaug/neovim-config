@@ -6,7 +6,9 @@ local my_attach = function(client, bufnr)
 	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
 end
 
-return {
+local map = vim.keymap.set
+
+local plugin = {
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
@@ -21,7 +23,10 @@ return {
 	{
 		"mfussenegger/nvim-jdtls",
 		ft = "java",
+		dependecies = { "mfussenegger/nvim-dap" },
 		config = function()
+			require("dap")
+
 			local capabilities = require("nvchad.configs.lspconfig").capabilities
 			local on_init = require("nvchad.configs.lspconfig").on_init
 			local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
@@ -74,6 +79,11 @@ return {
 					bundles = bundles,
 				},
 			}
+
+			map({ "n" }, "<Leader>ds", function()
+				require("jdtls.dap").setup_dap_main_class_configs()
+			end, { desc = "Set up debugging", noremap = true, silent = true })
+
 			vim.api.nvim_create_autocmd("FileType", {
 				pattern = "java",
 				callback = function()
@@ -83,3 +93,5 @@ return {
 		end,
 	},
 }
+
+return plugin

@@ -1,5 +1,3 @@
-local map = vim.keymap.set
-
 local spec = {
 	"mfussenegger/nvim-dap",
 	dependencies = { "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio" },
@@ -17,12 +15,6 @@ local spec = {
 		dap.listeners.before.event_exited["dapui_config"] = function()
 			dapui.close()
 		end
-
-		map({ "n" }, "<leader>dc", function()
-			dap.continue()
-		end, { desc = "Continue" })
-
-		map({ "n" }, "<leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
 	end,
 }
 

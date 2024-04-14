@@ -50,6 +50,7 @@ map("n", "<leader>rcf", function()
 end, { desc = "Show crate feature" })
 
 map("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+map("n", "<leader>dc", dap.continue, { desc = "Continue/Start debugging" })
 
 map("n", "<leader>djn", function()
 	require("jdtls").test_nearest_method()
