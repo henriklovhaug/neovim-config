@@ -84,7 +84,7 @@ M.mason = {
 		-- go
 		"gopls",
 		"glint",
-		"go-debug-adapter",
+		"delve",
 		"goimports",
 		"goimports-reviser",
 		"golangci-lint",

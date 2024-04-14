@@ -22,7 +22,7 @@ local options = {
 
 		java = { "google-java-format" },
 
-		go = { "goimports" },
+		go = { "goimports", "gofmt", "goimports-reviser" },
 
 		sh = { "beautysh" },
 
