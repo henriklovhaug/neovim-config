@@ -1,32 +1,34 @@
 local M = {}
 
+-- abcdefghijklmnopqrstuvwxyz
 M.treesitter = {
 	ensure_installed = {
-		"vim",
-		"lua",
-		"html",
-		"css",
-		"scss",
-		"javascript",
-		"typescript",
-		"tsx",
 		"c",
 		"cpp",
+		"css",
+		"cuda",
+		"dockerfile",
+		"go",
+		"html",
+		"java",
+		"javascript",
+		"json",
+		"kotlin",
+		"latex",
+		"lua",
 		"markdown",
 		"markdown_inline",
-		"rust",
-		"go",
-		"svelte",
-		"dockerfile",
-		"java",
-		"latex",
-		"python",
-		"json",
 		"prisma",
-		"sql",
+		"python",
 		"regex",
-		"kotlin",
 		"ron",
+		"rust",
+		"scss",
+		"sql",
+		"svelte",
+		"tsx",
+		"typescript",
+		"vim",
 	},
 	indent = {
 		enable = true,
@@ -44,29 +46,30 @@ M.mason = {
 
 		-- web dev stuff
 		"css-lsp",
-		"html-lsp",
-		"typescript-language-server",
 		"deno",
-		"prettierd",
-		"prettier",
+		"html-lsp",
 		"htmx-lsp",
+		"prettier",
+		"prettierd",
+		"typescript-language-server",
+
 		--tailwindcss
 		"tailwindcss-language-server",
 
 		--python stuff
-		"pyright",
-		"mypy",
-		"ruff",
 		"debugpy",
 		"isort",
+		"mypy",
+		"pyright",
+		"ruff",
 
 		-- c/cpp stuff
 		"clangd",
 		"clang-format",
 
 		-- rust
-		"rust-analyzer",
 		"codelldb",
+		"rust-analyzer",
 
 		-- svelte
 		"svelte-language-server",
@@ -77,47 +80,47 @@ M.mason = {
 		"hadolint",
 
 		-- sql
-		"sqls",
 		"prisma-language-server",
 		"sqlfmt",
+		"sqls",
 
 		-- go
-		"gopls",
-		"glint",
 		"delve",
+		"glint",
 		"goimports",
 		"goimports-reviser",
 		"golangci-lint",
 		"golangci-lint-langserver",
 		"golines",
+		"gopls",
 		"gotests",
 		"gotestsum",
 
 		-- java
-		"jdtls",
-		"google-java-format",
-		"java-test",
-		"vscode-java-decompiler",
-		"java-debug-adapter",
 		"checkstyle",
+		"google-java-format",
+		"java-debug-adapter",
+		"java-test",
+		"jdtls",
+		"vscode-java-decompiler",
 
 		-- latex
-		"texlab",
 		"latexindent",
+		"texlab",
 
 		-- markdown
 		"glow",
-		"marksman",
-		"ltex-ls",
 		"harper-ls",
+		"ltex-ls",
+		"marksman",
 
 		-- xml
 		"xmlformatter",
 
 		-- cli
 		"ast-grep",
-		"trivy",
 		"gitui",
+		"trivy",
 		"zk",
 
 		-- shell
