@@ -13,6 +13,7 @@ local spec = {
 		end
 
 		map("n", "<leader>dq", dapui.close, { desc = "Close the UI" })
+		map("n", "<Leader>dr", dap.restart, { desc = "Restart the debugger" })
 	end,
 }
 

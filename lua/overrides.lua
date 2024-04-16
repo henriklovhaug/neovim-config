@@ -1,7 +1,14 @@
 local M = {}
 
--- abcdefghijklmnopqrstuvwxyz
 M.treesitter = {
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<Enter>",
+			node_incremental = "<Enter>",
+			node_decremental = "<BS>",
+		},
+	},
 	ensure_installed = {
 		"c",
 		"cpp",

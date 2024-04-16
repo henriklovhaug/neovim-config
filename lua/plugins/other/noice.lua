@@ -1,5 +1,4 @@
 local spec = {
-	-- lazy.nvim
 	"folke/noice.nvim",
 	event = "cmdlineEnter",
 	opts = {
