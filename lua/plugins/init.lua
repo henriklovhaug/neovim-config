@@ -108,6 +108,12 @@ return {
 		"aznhe21/actions-preview.nvim",
 	},
 
+	-- Lua
+	{
+		"folke/zen-mode.nvim",
+		opts = {},
+	},
+
 	{
 		"mistricky/codesnap.nvim",
 		build = "make",

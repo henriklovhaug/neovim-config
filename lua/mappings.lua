@@ -59,3 +59,14 @@ end, { desc = "Test nearest method" })
 map("n", "<leader>djc", function()
 	require("jdtls").test_class()
 end, { desc = "Test class" })
+
+map("n", "<C-w>o", function()
+	require("zen-mode").toggle({
+		window = {
+			width = 0.85, -- width will be 85% of the editor width
+		},
+	})
+end, { desc = "Zen mode" })
+
+map("n", "ø", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+map("n", "æ", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
