@@ -31,7 +31,7 @@ local my_attach = function(client, bufnr)
 		vim.cmd.RustLsp("rebuildProcMacros")
 	end, { desc = "Rebuild proc macros" })
 
-	map({ "n" }, "<leader>r", function()
+	map({ "n" }, "<leader>re", function()
 		vim.cmd.RustLsp("expandMacro")
 	end, { desc = "Expand macro" })
 end
