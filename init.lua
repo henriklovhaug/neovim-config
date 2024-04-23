@@ -33,7 +33,7 @@ cmd("Format", function(args)
 end, { range = true })
 
 cmd("Update", function()
-	require("lazy").update()
+	require("lazy").sync()
 end, {})
 
 -- bootstrap lazy and all plugins

@@ -115,6 +115,11 @@ return {
 	},
 
 	{
+		"HakonHarnes/img-clip.nvim",
+		ft = { "markdown" },
+	},
+
+	{
 		"mistricky/codesnap.nvim",
 		build = "make",
 		cmd = { "CodeSnap" },
