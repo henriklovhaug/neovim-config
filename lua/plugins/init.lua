@@ -119,6 +119,22 @@ return {
 		ft = { "markdown" },
 	},
 
+	-- {
+	-- 	dir = "~/dev/Preview.nvim",
+	-- 	cmd = { "Preview" },
+	-- 	config = function()
+	-- 		require("preview").setup()
+	-- 	end,
+	-- },
+
+	{
+		"henriklovhaug/Preview.nvim",
+		cmd = { "Preview" },
+		config = function()
+			require("preview").setup()
+		end,
+	},
+
 	{
 		"mistricky/codesnap.nvim",
 		build = "make",
