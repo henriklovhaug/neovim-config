@@ -59,6 +59,7 @@ M.mason = {
 		"prettier",
 		"prettierd",
 		"typescript-language-server",
+		"djlint",
 
 		--tailwindcss
 		"tailwindcss-language-server",

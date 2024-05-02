@@ -8,6 +8,7 @@ local options = {
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd" } },
 		markdown = { "deno_fmt" },
+		htmldjango = { "djlint" },
 		html = { { "prettierd" } },
 		css = { { "prettierd" } },
 		svelte = { { "prettierd" } },

@@ -33,6 +33,11 @@ local servers = {
 	"svelte",
 }
 
+local html_filetypes = { "html", "htmldjango", "templ" }
+
+local luasnip = require("luasnip")
+luasnip.filetype_extend("htmldjango", { "html" })
+
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
 		on_init = on_init,
@@ -49,6 +54,20 @@ local function organize_imports()
 	}
 	vim.lsp.buf.execute_command(params)
 end
+
+lspconfig.html.setup({
+	filetypes = html_filetypes,
+	on_attach = my_attach,
+	capabilities = capabilities,
+	on_init = on_init,
+})
+
+lspconfig.htmx.setup({
+	filetypes = html_filetypes,
+	on_attach = my_attach,
+	capabilities = capabilities,
+	on_init = on_init,
+})
 
 lspconfig.tsserver.setup({
 	on_attach = my_attach,
