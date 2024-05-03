@@ -17,6 +17,7 @@ M.treesitter = {
 		"dockerfile",
 		"go",
 		"html",
+		"htmldjango",
 		"java",
 		"javascript",
 		"json",
