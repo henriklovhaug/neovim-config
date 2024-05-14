@@ -16,6 +16,11 @@ autocmd("FileType", {
 	command = "set spell",
 })
 
+autocmd("FileType", {
+	pattern = "html",
+	command = "set filetype=htmldjango",
+})
+
 cmd("Qa", function()
 	vim.cmd("qa")
 end, {})
