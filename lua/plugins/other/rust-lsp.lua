@@ -8,20 +8,12 @@ local spec = {
 	"mrcjkb/rustaceanvim",
 	version = "^4", -- Recommended
 	ft = { "rust" },
-	dependencies = {
-		"neovim/nvim-lspconfig",
-		{
-			"lvimuser/lsp-inlayhints.nvim",
-			opts = {},
-		},
-	},
 }
 
 local map = vim.keymap.set
 
 local my_attach = function(client, bufnr)
 	on_attach(client, bufnr)
-	require("lsp-inlayhints").on_attach(client, bufnr)
 
 	map({ "n", "v" }, "<leader>ca", function()
 		require("actions-preview").code_actions()
@@ -34,6 +26,7 @@ local my_attach = function(client, bufnr)
 	map({ "n" }, "<leader>re", function()
 		vim.cmd.RustLsp("expandMacro")
 	end, { desc = "Expand macro" })
+	vim.lsp.inlay_hint.enable(true)
 end
 
 vim.g.rustaceanvim = {

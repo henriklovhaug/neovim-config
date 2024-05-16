@@ -11,6 +11,7 @@ local my_attach = function(client, bufnr)
 	vim.keymap.set({ "n", "v" }, "<leader>ca", function()
 		require("actions-preview").code_actions()
 	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
+	vim.lsp.inlay_hint.enable(true)
 end
 
 -- if you just want default config for the servers then put them in a table
