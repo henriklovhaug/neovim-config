@@ -7,7 +7,6 @@
     - [Prerequisites](#prerequisites)
   - [Other extensions](#other-extensions)
     - [Oatmeal](#oatmeal)
-    - [ZK](#zk)
 
 <!--toc:end-->
 
@@ -34,6 +33,4 @@ Some plugins will not work without other applications installed. Follow
 [Oatmeal](https://github.com/dustinblackman/oatmeal.nvim) guide to see what you
 need to run a LLM inside NVIM
 
-### ZK
-
-Run `zk init` to create zk notebook
+You will also need to install [ollama](https://github.com/ollama/ollama)

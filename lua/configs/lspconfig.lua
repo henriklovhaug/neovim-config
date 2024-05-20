@@ -32,6 +32,7 @@ local servers = {
 	"pyright",
 	"prismals",
 	"svelte",
+	"markdown_oxide",
 }
 
 local html_filetypes = { "html", "htmldjango", "templ" }

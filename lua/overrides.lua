@@ -122,6 +122,7 @@ M.mason = {
 		"harper-ls",
 		"ltex-ls",
 		"marksman",
+		"markdown-oxide",
 
 		-- xml
 		"xmlformatter",
@@ -130,7 +131,6 @@ M.mason = {
 		"ast-grep",
 		"gitui",
 		"trivy",
-		"zk",
 
 		-- shell
 		"beautysh",
