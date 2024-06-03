@@ -12,6 +12,8 @@ map({ "n", "v" }, "<leader>fm", "<cmd>Format<CR>", { desc = "File Format with co
 map({ "n", "v" }, "j", "gj", { desc = "Move down visual line" })
 map({ "n", "v" }, "k", "gk", { desc = "Move up visual line" })
 
+map("n", "<leader>lg", require("neogit").open, { desc = "Open Neogit" })
+
 map({ "n", "v" }, ",", ":", { desc = "Enter command mode" })
 map("n", "G", "Gzz", { desc = "Go to end of file" })
 map("n", "T", "Gzt", { desc = "Go to end of file" })
