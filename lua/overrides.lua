@@ -61,6 +61,7 @@ M.mason = {
 		"prettierd",
 		"typescript-language-server",
 		"djlint",
+    "astro-language-server",
 
 		--tailwindcss
 		"tailwindcss-language-server",
