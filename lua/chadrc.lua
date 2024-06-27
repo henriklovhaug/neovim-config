@@ -21,13 +21,12 @@ M.ui = {
 			end,
 		},
 	},
-	lsp = {
-		signature = false,
-	},
 
 	tabufline = {
 		order = { "treeOffset", "buffers", "tabs" },
 	},
 }
+
+M.lsp = { signature = false }
 
 return M

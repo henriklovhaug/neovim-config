@@ -16,24 +16,24 @@ end
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "astro",
+	"astro",
 	"clangd",
 	"cssls",
-	"dockerls",
 	"docker_compose_language_service",
+	"dockerls",
 	"gopls",
 	"harper_ls",
 	"html",
 	"htmx",
 	"lua_ls",
+	"markdown_oxide",
 	"marksman",
+	"prismals",
+	"pyright",
+	"svelte",
 	"tailwindcss",
 	"texlab",
 	"tsserver",
-	"pyright",
-	"prismals",
-	"svelte",
-	"markdown_oxide",
 }
 
 local html_filetypes = { "html", "htmldjango", "templ" }

@@ -1,6 +1,6 @@
 local spec = {
 	"folke/noice.nvim",
-	event = "cmdlineEnter",
+	event = "VeryLazy",
 	opts = {
 		-- add any options here
 		routes = {
