@@ -10,7 +10,7 @@ M.treesitter = {
 		},
 	},
 	ensure_installed = {
-    "astro",
+		"astro",
 		"c",
 		"cpp",
 		"css",
@@ -62,7 +62,7 @@ M.mason = {
 		"prettierd",
 		"typescript-language-server",
 		"djlint",
-    "astro-language-server",
+		"astro-language-server",
 
 		--tailwindcss
 		"tailwindcss-language-server",
