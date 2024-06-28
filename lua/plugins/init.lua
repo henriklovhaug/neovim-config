@@ -85,7 +85,7 @@ return {
 		config = function()
 			require("oatmeal").setup({
 				backend = "ollama",
-				model = "llama3:8b",
+				model = "gemma2",
 			})
 		end,
 	},
