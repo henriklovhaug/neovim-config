@@ -54,15 +54,15 @@ M.mason = {
 		"stylua",
 
 		-- web dev stuff
+		"astro-language-server",
 		"css-lsp",
 		"deno",
+		"djlint",
 		"html-lsp",
 		"htmx-lsp",
 		"prettier",
 		"prettierd",
 		"typescript-language-server",
-		"djlint",
-		"astro-language-server",
 
 		--tailwindcss
 		"tailwindcss-language-server",
