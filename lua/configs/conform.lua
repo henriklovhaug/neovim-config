@@ -14,6 +14,7 @@ local options = {
 		html = { { "prettier" } },
 		css = { { "prettierd" } },
 		svelte = { { "prettier" } },
+		astro = { { "prettier" } },
 		scss = { { "prettierd" } },
 		yaml = { { "prettierd" } },
 		json = { { "deno_fmt" } },
