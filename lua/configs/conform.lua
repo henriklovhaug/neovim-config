@@ -6,18 +6,18 @@ local options = {
 		-- Conform will run multiple formatters sequentially
 		python = { "isort", "ruff_format" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "deno_fmt" } },
-		typescript = { { "deno_fmt" } },
-		typescriptreact = { { "prettier" } },
+		javascript = { "deno_fmt" },
+		typescript = { "deno_fmt" },
+		typescriptreact = { "prettier" },
 		markdown = { "deno_fmt" },
 		htmldjango = { "prettier", "djlint" },
-		html = { { "prettier" } },
-		css = { { "prettierd" } },
-		svelte = { { "prettier" } },
-		astro = { { "prettier" } },
-		scss = { { "prettierd" } },
-		yaml = { { "prettierd" } },
-		json = { { "deno_fmt" } },
+		html = { "prettier" },
+		css = { "prettierd" },
+		svelte = { "prettier" },
+		astro = { "prettier" },
+		scss = { "prettierd" },
+		yaml = { "prettierd" },
+		json = { "deno_fmt" },
 
 		latex = { "latexindent" },
 
