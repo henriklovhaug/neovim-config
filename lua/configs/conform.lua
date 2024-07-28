@@ -28,6 +28,7 @@ local options = {
 		go = { "goimports", "gofmt", "goimports-reviser" },
 
 		sh = { "beautysh" },
+		bash = { "beautysh" },
 
 		c = { "clang-format" },
 		cpp = { "clang-format" },
