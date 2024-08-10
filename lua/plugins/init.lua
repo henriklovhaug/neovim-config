@@ -157,6 +157,12 @@ return {
 		},
 		config = true,
 	},
+	{
+		"stevearc/quicker.nvim",
+		---@module "quicker"
+		---@type quicker.SetupOptions
+		opts = {},
+	},
 
 	{ import = "plugins.other" },
 }
