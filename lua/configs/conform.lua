@@ -7,7 +7,7 @@ local options = {
 		python = { "isort", "ruff_format" },
 		-- Use a sub-list to run only the first available formatter
 		javascript = { "deno_fmt" },
-		typescript = { "deno_fmt" },
+		typescript = { "prettier" },
 		typescriptreact = { "prettier" },
 		markdown = { "deno_fmt" },
 		htmldjango = { "prettier", "djlint" },

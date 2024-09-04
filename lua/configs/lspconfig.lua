@@ -14,6 +14,15 @@ local my_attach = function(client, bufnr)
 	vim.lsp.inlay_hint.enable(true)
 end
 
+local svelte_attach = function(client)
+	vim.api.nvim_create_autocmd("BufWritePost", {
+		pattern = { "*.js", "*.ts" },
+		callback = function(ctx)
+			client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+		end,
+	})
+end
+
 -- if you just want default config for the servers then put them in a table
 local servers = {
 	"astro",
@@ -82,6 +91,12 @@ lspconfig.tsserver.setup({
 			description = "Organize Imports",
 		},
 	},
+})
+
+lspconfig.svelte.setup({
+	on_attach = svelte_attach,
+	capabilities = capabilities,
+	on_init = on_init,
 })
 
 lspconfig.harper_ls.setup({
