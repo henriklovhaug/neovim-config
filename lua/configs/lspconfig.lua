@@ -42,7 +42,7 @@ local servers = {
 	"svelte",
 	"tailwindcss",
 	"texlab",
-	"tsserver",
+	"ts_ls",
 }
 
 local html_filetypes = { "html", "htmldjango", "templ" }
@@ -81,7 +81,7 @@ lspconfig.htmx.setup({
 	on_init = on_init,
 })
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
