@@ -11,6 +11,7 @@ M.treesitter = {
 	},
 	ensure_installed = {
 		"astro",
+		"bash",
 		"c",
 		"cpp",
 		"css",
