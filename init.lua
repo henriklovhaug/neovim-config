@@ -16,10 +16,10 @@ autocmd("FileType", {
 	command = "set spell",
 })
 
-autocmd("FileType", {
-	pattern = "html",
-	command = "set filetype=htmldjango",
-})
+-- autocmd("FileType", {
+-- 	pattern = "html",
+-- 	command = "set filetype=htmldjango",
+-- })
 
 cmd("Qa", function()
 	vim.cmd("qa")
@@ -72,6 +72,7 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
+require("options")
 require("nvchad.autocmds")
 
 vim.schedule(function()
