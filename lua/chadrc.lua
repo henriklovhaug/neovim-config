@@ -9,10 +9,12 @@ local recording = function()
 	end
 end
 
-M.ui = {
-	-- theme = "onedark",
+M.base64 = {
+	theme = "onedark",
 	transparency = true,
+}
 
+M.ui = {
 	statusline = {
 		order = { "mode", "file", "git", "%=", "req", "%=", "diagnostics", "lsp", "cwd", "cursor" },
 		modules = {
