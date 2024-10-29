@@ -4,9 +4,6 @@ local spec = {
 		"okuuva/auto-save.nvim",
 		event = { "InsertLeave", "TextChanged" },
 		opts = {
-			execution_message = {
-				enabled = false,
-			},
 			condition = function(buf)
 				local fn = vim.fn
 
