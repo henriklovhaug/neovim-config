@@ -17,6 +17,12 @@ local spec = {
 				},
 				opts = { skip = true },
 			},
+			{
+				filter = {
+					find = "server cancelled the request",
+				},
+				opts = { skip = true },
+			},
 		},
 		presets = {
 			lsp_doc_border = true,
