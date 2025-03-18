@@ -26,6 +26,8 @@ map("n", "<leader>ft", function()
 	require("telescope.builtin").tags({ only_sort_tags = true })
 end, { desc = "Find Tags" })
 
+map("n", "<leader>gb", "<cmd>BlameToggle<CR>", { desc = "Toggle git blame" })
+
 map("n", "<leader>fr", function()
 	require("telescope.builtin").lsp_references()
 end, { desc = "Find references" })
