@@ -19,8 +19,6 @@ local options = {
 		yaml = { "prettierd" },
 		json = { "deno_fmt" },
 
-		latex = { "latexindent" },
-
 		rust = { "rustfmt" },
 
 		java = { "google-java-format" },

@@ -1,6 +1,6 @@
 local spec = {
 	"folke/todo-comments.nvim",
-  lazy = false,
+	lazy = false,
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {
 		-- your configuration comes here

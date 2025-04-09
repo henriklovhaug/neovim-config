@@ -31,7 +31,7 @@ local servers = {
 	"docker_compose_language_service",
 	"dockerls",
 	"gopls",
-	"harper_ls",
+	-- "harper_ls",
 	"html",
 	"htmx",
 	"lua_ls",
@@ -67,6 +67,27 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
+lspconfig.texlab.setup({
+	on_attach = my_attach,
+	capabilities = capabilities,
+	on_init = on_init,
+	settings = {
+		texlab = {
+			-- build = {
+			-- 	onSave = true,
+			-- 	args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+			-- 	forwardSearchAfter = false,
+			-- 	executable = "latexmk",
+			-- 	name = "latexmk",
+			-- },
+			latexindent = {
+				modifyLineBreaks = true,
+				["local"] = "formatting.yaml",
+			},
+		},
+	},
+})
+
 lspconfig.html.setup({
 	filetypes = html_filetypes,
 	on_attach = my_attach,
@@ -100,6 +121,10 @@ lspconfig.svelte.setup({
 })
 
 lspconfig.harper_ls.setup({
+  on_attach = my_attach,
+  capabilities = capabilities,
+  on_init = on_init,
+	filetypes = { "markdown", "html", "plaintex" },
 	settings = {
 		["harper-ls"] = {
 			diagnosticSeverity = "hint", -- Can also be "information", "warning", or "error"
