@@ -7,6 +7,7 @@ return {
 			require("configs.conform")
 		end,
 	},
+	{ "barreiroleo/ltex-extra.nvim" },
 
 	{
 		"neovim/nvim-lspconfig",

@@ -119,6 +119,7 @@ M.mason = {
 		-- latex
 		"latexindent",
 		"texlab",
+		"ltex-ls-plus",
 
 		-- markdown
 		"glow",

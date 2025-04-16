@@ -14,6 +14,15 @@ local my_attach = function(client, bufnr)
 	vim.lsp.inlay_hint.enable(true)
 end
 
+local ltex_attach = function(client, bufnr)
+	on_attach(client, bufnr)
+	require("ltex_extra").setup()
+	vim.keymap.set({ "n", "v" }, "<leader>ca", function()
+		require("actions-preview").code_actions()
+	end, { desc = "Code actions", noremap = true, silent = true, buffer = bufnr })
+	vim.lsp.inlay_hint.enable(true)
+end
+
 local svelte_attach = function(client)
 	vim.api.nvim_create_autocmd("BufWritePost", {
 		pattern = { "*.js", "*.ts" },
@@ -66,6 +75,24 @@ local function organize_imports()
 	}
 	vim.lsp.buf.execute_command(params)
 end
+
+lspconfig.ltex_plus.setup({
+	on_attach = ltex_attach,
+	capabilities = capabilities,
+	on_init = on_init,
+	filetypes = { "tex", "text" },
+	settings = {
+		ltex = {
+			language = "en-US",
+			dictionary = {
+				["en-US"] = { "NvimLsp" },
+			},
+			diagnosticSeverity = "information",
+			-- set to false to disable all errors and warnings
+			setenceCacheSize = 2000,
+		},
+	},
+})
 
 lspconfig.texlab.setup({
 	on_attach = my_attach,
@@ -121,9 +148,9 @@ lspconfig.svelte.setup({
 })
 
 lspconfig.harper_ls.setup({
-  on_attach = my_attach,
-  capabilities = capabilities,
-  on_init = on_init,
+	on_attach = my_attach,
+	capabilities = capabilities,
+	on_init = on_init,
 	filetypes = { "markdown", "html", "plaintex" },
 	settings = {
 		["harper-ls"] = {
