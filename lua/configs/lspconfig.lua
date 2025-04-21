@@ -109,7 +109,7 @@ lspconfig.texlab.setup({
 			-- },
 			latexindent = {
 				modifyLineBreaks = true,
-				["local"] = "formatting.yaml",
+				["local"] = vim.fn.getcwd() .. "/formatting.yaml",
 			},
 		},
 	},
