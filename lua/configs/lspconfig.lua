@@ -80,7 +80,7 @@ lspconfig.ltex_plus.setup({
 	on_attach = ltex_attach,
 	capabilities = capabilities,
 	on_init = on_init,
-	filetypes = { "tex", "text" },
+	filetypes = { "tex", "text", "plaintex" },
 	settings = {
 		ltex = {
 			language = "en-US",
