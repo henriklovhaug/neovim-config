@@ -23,6 +23,12 @@ local spec = {
 				},
 				opts = { skip = true },
 			},
+			{
+				filter = {
+					find = "getaddrinfo ENOTFOUND api.github.com",
+				},
+				opts = { skip = true },
+			},
 		},
 		presets = {
 			lsp_doc_border = true,
