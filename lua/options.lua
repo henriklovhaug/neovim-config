@@ -14,6 +14,8 @@ vim.diagnostic.config({
 	update_in_insert = false,
 })
 
+vim.g.tex_flavor = "latex"
+
 vim.lsp.handlers['$/progress'] = function(_, result, ctx)
     local value = result.value
     if not value.kind then

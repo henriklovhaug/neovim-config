@@ -4,6 +4,11 @@ local on_attach = config.on_attach
 local on_init = config.on_init
 local capabilities = config.capabilities
 
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
+
 local lspconfig = require("lspconfig")
 
 local my_attach = function(client, bufnr)
