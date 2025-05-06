@@ -97,7 +97,7 @@ return {
 		config = function()
 			require("oatmeal").setup({
 				backend = "ollama",
-				model = "llama3.1:latest",
+				model = "deepseek-r1:8b",
 			})
 		end,
 	},
