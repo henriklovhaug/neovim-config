@@ -34,15 +34,15 @@ local plugin = {
 			-- calculate workspace dir
 			local workspace_dir = vim.fn.stdpath("data") .. "/site/java/workspace-root/" .. project_name
 			-- get the mason install path
-			local install_path = require("mason-registry").get_package("jdtls"):get_install_path()
+			local install_path = vim.fn.exepath("jdtls")
 			-- get the debug adapter install path
-			local debug_install_path = require("mason-registry").get_package("java-debug-adapter"):get_install_path()
+			local debug_install_path = vim.fn.expand("$MASON/share/java-debug-adapter")
 			local bundles = {
 				vim.fn.glob(debug_install_path .. "/extension/server/com.microsoft.java.debug.plugin-*.jar", 1),
 			}
 
 			-- Comment out these lines if you have 'java-test' installed
-			local java_test_path = require("mason-registry").get_package("java-test"):get_install_path()
+      local java_test_path = vim.fn.expand("$MASON/share/java-test")
 			vim.list_extend(bundles, vim.split(vim.fn.glob(java_test_path .. "/extension/server/*.jar", 1), "\n"))
 
 			local config = {

@@ -66,6 +66,7 @@ return {
 		"hrsh7th/nvim-cmp",
 		opts = overrides.cmp,
 	},
+	-- { import = "nvchad.blink.lazyspec" },
 
 	{
 		"folke/trouble.nvim",
@@ -77,7 +78,7 @@ return {
 		ft = { "python" },
 		dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
 		config = function()
-			local path = require("mason-registry").get_package("debugpy"):get_install_path() .. "/venv/bin/python"
+			local path = vim.fn.exepath("debugpy")
 			require("dap-python").setup(path)
 		end,
 	},
