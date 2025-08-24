@@ -29,6 +29,7 @@ M.treesitter = {
 		"markdown",
 		"markdown_inline",
 		"prisma",
+		"proto",
 		"python",
 		"regex",
 		"ron",
