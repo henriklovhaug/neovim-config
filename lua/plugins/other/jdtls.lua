@@ -42,7 +42,7 @@ local plugin = {
 			}
 
 			-- Comment out these lines if you have 'java-test' installed
-      local java_test_path = vim.fn.expand("$MASON/share/java-test")
+			local java_test_path = vim.fn.expand("$MASON/share/java-test")
 			vim.list_extend(bundles, vim.split(vim.fn.glob(java_test_path .. "/extension/server/*.jar", 1), "\n"))
 
 			local config = {

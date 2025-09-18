@@ -5,11 +5,11 @@ local on_init = config.on_init
 local capabilities = config.capabilities
 
 capabilities.textDocument.foldingRange = {
-    dynamicRegistration = false,
-    lineFoldingOnly = true
+	dynamicRegistration = false,
+	lineFoldingOnly = true,
 }
 
-local lspconfig = require("lspconfig")
+-- local lspconfig = require("lspconfig")
 
 local my_attach = function(client, bufnr)
 	on_attach(client, bufnr)
@@ -65,11 +65,17 @@ local luasnip = require("luasnip")
 luasnip.filetype_extend("htmldjango", { "html" })
 
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
+	vim.lsp.config(lsp, {
+		capabilities = capabilities,
 		on_init = on_init,
 		on_attach = my_attach,
-		capabilities = capabilities,
 	})
+	vim.lsp.enable(lsp)
+	-- lspconfig[lsp].setup({
+	-- 	on_init = on_init,
+	-- 	on_attach = my_attach,
+	-- 	capabilities = capabilities,
+	-- })
 end
 
 local function organize_imports()
@@ -81,7 +87,7 @@ local function organize_imports()
 	vim.lsp.buf.execute_command(params)
 end
 
-lspconfig.ltex_plus.setup({
+vim.lsp.config("ltex_plus", {
 	on_attach = ltex_attach,
 	capabilities = capabilities,
 	on_init = on_init,
@@ -99,7 +105,7 @@ lspconfig.ltex_plus.setup({
 	},
 })
 
-lspconfig.texlab.setup({
+vim.lsp.config("texlab", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
@@ -120,21 +126,21 @@ lspconfig.texlab.setup({
 	},
 })
 
-lspconfig.html.setup({
+vim.lsp.config("html", {
 	filetypes = html_filetypes,
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
 })
 
-lspconfig.htmx.setup({
+vim.lsp.config("htmx", {
 	filetypes = html_filetypes,
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
 })
 
-lspconfig.ts_ls.setup({
+vim.lsp.config("ts_ls", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
@@ -146,13 +152,13 @@ lspconfig.ts_ls.setup({
 	},
 })
 
-lspconfig.svelte.setup({
+vim.lsp.config("svelte", {
 	on_attach = svelte_attach,
 	capabilities = capabilities,
 	on_init = on_init,
 })
 
-lspconfig.harper_ls.setup({
+vim.lsp.config("harper_ls", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
@@ -167,12 +173,12 @@ lspconfig.harper_ls.setup({
 	},
 })
 
-lspconfig.gopls.setup({
+vim.lsp.config("gopls", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
 	cmd = { "gopls" },
-	root_dir = lspconfig.util.root_pattern("go.mod", ".git", "go.work"),
+	-- root_dir = lspconfig.util.root_pattern("go.mod", ".git", "go.work"),
 	settings = {
 		gopls = {
 			completeUnimported = true,

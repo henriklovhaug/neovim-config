@@ -21,9 +21,9 @@ local cmd = vim.api.nvim_create_user_command
 -- 	command = "set filetype=htmldjango",
 -- })
 vim.filetype.add({
-  extension = {
-    mdx = "markdown",
-  }
+	extension = {
+		mdx = "markdown",
+	},
 })
 
 cmd("Qa", function()

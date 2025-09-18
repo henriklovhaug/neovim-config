@@ -36,7 +36,7 @@ map("n", "<leader>h", function()
 	vim.lsp.buf.hover()
 end, { desc = "Show hover" })
 
-map({"n", "t"}, "<C-t>", function()
+map({ "n", "t" }, "<C-t>", function()
 	require("nvchad.term").toggle({ pos = "float" })
 end, { desc = "Toggle tabufline" })
 
