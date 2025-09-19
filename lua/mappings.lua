@@ -76,10 +76,10 @@ map("n", "<C-w>o", function()
 end, { desc = "Zen mode" })
 
 map("n", "ø", function()
-	vim.diagnostic.jump({ count = 1, float = true })
+	vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = "Go to previous diagnostic" })
 map("n", "æ", function()
-	vim.diagnostic.jump({ count = -1, float = true })
+	vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Go to next diagnostic" })
 
 map({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
