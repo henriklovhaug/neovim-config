@@ -10,6 +10,11 @@ return {
 	{ "barreiroleo/ltex-extra.nvim" },
 
 	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+	},
+
+	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("nvchad.configs.lspconfig").defaults()
