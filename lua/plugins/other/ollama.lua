@@ -10,9 +10,11 @@ local ai = {
 				},
 				inline = {
 					adapter = "ollama",
+					model = "qwen2.5-coder:14b",
 				},
 				cmd = {
 					adapter = "ollama",
+					model = "qwen2.5-coder:14b",
 				},
 			},
 			adapters = {
@@ -41,7 +43,7 @@ local ai = {
 	},
 	{
 		"OXY2DEV/markview.nvim",
-		lazy = false,
+		event = "VeryLazy",
 		opts = {
 			preview = {
 				filetypes = { "markdown", "codecompanion" },

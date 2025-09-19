@@ -71,11 +71,6 @@ for _, lsp in ipairs(servers) do
 		on_attach = my_attach,
 	})
 	vim.lsp.enable(lsp)
-	-- lspconfig[lsp].setup({
-	-- 	on_init = on_init,
-	-- 	on_attach = my_attach,
-	-- 	capabilities = capabilities,
-	-- })
 end
 
 local function organize_imports()
@@ -84,7 +79,7 @@ local function organize_imports()
 		arguments = { vim.api.nvim_buf_get_name(0) },
 		title = "",
 	}
-	vim.lsp.buf.execute_command(params)
+  vim.lsp.Client:exec_cmd(params)
 end
 
 vim.lsp.config("ltex_plus", {

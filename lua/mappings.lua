@@ -75,5 +75,16 @@ map("n", "<C-w>o", function()
 	})
 end, { desc = "Zen mode" })
 
-map("n", "ø", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
-map("n", "æ", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+map("n", "ø", function()
+	vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Go to previous diagnostic" })
+map("n", "æ", function()
+	vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = "Go to next diagnostic" })
+
+map({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "Visual code assistant" })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
