@@ -4,6 +4,7 @@ local dap = require("dap")
 -- add yours here
 
 local map = vim.keymap.set
+vim.keymap.del("n", "<leader>h")
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
@@ -31,10 +32,6 @@ map("n", "<leader>gb", "<cmd>BlameToggle<CR>", { desc = "Toggle git blame" })
 map("n", "<leader>fr", function()
 	require("telescope.builtin").lsp_references()
 end, { desc = "Find references" })
-
-map("n", "<leader>h", function()
-	vim.lsp.buf.hover()
-end, { desc = "Show hover" })
 
 map({ "n", "t" }, "<C-t>", function()
 	require("nvchad.term").toggle({ pos = "float" })
