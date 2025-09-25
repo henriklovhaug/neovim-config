@@ -42,9 +42,9 @@ local spec = {
 				gitsigns.blame_line({ full = true })
 			end)
 
-			map("n", "<leader>hd", gitsigns.diffthis)
+			map("n", "<leader>gd", gitsigns.diffthis)
 
-			map("n", "<leader>hD", function()
+			map("n", "<leader>gD", function()
 				gitsigns.diffthis("~")
 			end)
 
