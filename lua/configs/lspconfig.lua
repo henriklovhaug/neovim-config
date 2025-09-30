@@ -30,9 +30,12 @@ end
 
 local svelte_attach = function(client)
 	vim.api.nvim_create_autocmd("BufWritePost", {
+		group = vim.api.nvim_create_augroup("SvelteTsJsRefresh", { clear = true }),
 		pattern = { "*.js", "*.ts" },
 		callback = function(ctx)
-			client.notify("$/onDidChangeTsOrJsFile", { uri = vim.uri_from_bufnr(ctx.buf) })
+			if client and client.notify then
+				client.notify("$/onDidChangeTsOrJsFile", { uri = vim.uri_from_bufnr(ctx.buf) })
+			end
 		end,
 	})
 end
