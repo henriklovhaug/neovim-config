@@ -70,7 +70,6 @@ for _, lsp in ipairs(servers) do
 		on_init = on_init,
 		on_attach = my_attach,
 	})
-	vim.lsp.enable(lsp)
 end
 
 local function organize_imports()
@@ -79,7 +78,7 @@ local function organize_imports()
 		arguments = { vim.api.nvim_buf_get_name(0) },
 		title = "",
 	}
-  vim.lsp.Client:exec_cmd(params)
+	vim.lsp.Client:exec_cmd(params)
 end
 
 vim.lsp.config("ltex_plus", {
@@ -185,3 +184,5 @@ vim.lsp.config("gopls", {
 		},
 	},
 })
+-- Only enable the servers after every config has been set
+vim.lsp.enable(servers)

@@ -35,7 +35,7 @@ end, { desc = "Find references" })
 
 map({ "n", "t" }, "<C-t>", function()
 	require("nvchad.term").toggle({ pos = "float" })
-end, { desc = "Toggle tabufline" })
+end, { desc = "Toggle central terminal" })
 
 map("n", "<leader>qb", function()
 	require("nvchad.tabufline").closeAllBufs()

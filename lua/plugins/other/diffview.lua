@@ -35,7 +35,6 @@ local spec = {
 				end
 			end, { desc = "Go to previous git hunk" })
 
-			map("n", "<leader>gp", gitsigns.preview_hunk)
 			map("n", "<leader>gi", gitsigns.preview_hunk_inline)
 
 			map("n", "<leader>hb", function()
