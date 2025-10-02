@@ -19,8 +19,6 @@ local options = {
 		yaml = { "prettierd" },
 		json = { "deno_fmt" },
 
-		rust = { "rustfmt" },
-
 		java = { "google-java-format" },
 
 		go = { "goimports", "gofmt", "goimports-reviser" },
@@ -36,6 +34,14 @@ local options = {
 		xml = { "xmlformat" },
 
 		sql = { "sqlfmt" },
+	},
+
+	formatters = {
+		rustfmt = {
+			append_args = function()
+				return { "--edition", "2024" }
+			end,
+		},
 	},
 }
 
