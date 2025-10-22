@@ -40,6 +40,7 @@ M.treesitter = {
 		"tsx",
 		"typescript",
 		"vim",
+		"yaml",
 	},
 	indent = {
 		enable = true,

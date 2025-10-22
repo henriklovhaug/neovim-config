@@ -48,11 +48,10 @@ local servers = {
 	"docker_compose_language_service",
 	"dockerls",
 	"gopls",
-	-- "harper_ls",
+	"harper_ls",
 	"html",
 	"htmx",
 	"lua_ls",
-	"markdown_oxide",
 	"marksman",
 	"prismals",
 	"pyright",
@@ -60,6 +59,7 @@ local servers = {
 	"tailwindcss",
 	"texlab",
 	"ts_ls",
+	-- "markdown_oxide",
 }
 
 local html_filetypes = { "html", "htmldjango", "templ" }
