@@ -84,6 +84,13 @@ local function organize_imports()
 	vim.lsp.Client:exec_cmd(params)
 end
 
+vim.lsp.config("clangd", {
+	on_attach = my_attach,
+	capabilities = capabilities,
+	on_init = on_init,
+	cmd = { "clangd", "--background-index", "--compile-commands-dir=" .. vim.fn.getcwd() },
+})
+
 vim.lsp.config("ltex_plus", {
 	on_attach = ltex_attach,
 	capabilities = capabilities,

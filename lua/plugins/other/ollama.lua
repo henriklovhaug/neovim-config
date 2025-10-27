@@ -10,11 +10,11 @@ local ai = {
 				},
 				inline = {
 					adapter = "ollama",
-					model = "gpt-oss:20b",
+					model = "codellama:13b",
 				},
 				cmd = {
 					adapter = "ollama",
-					model = "gpt-oss:20b",
+					model = "codellama:13b",
 				},
 			},
 			adapters = {
@@ -27,6 +27,7 @@ local ai = {
 							schema = {
 								model = {
 									default = "gpt-oss:20b",
+									codellama = "codellama:13b",
 								},
 							},
 							headers = {
