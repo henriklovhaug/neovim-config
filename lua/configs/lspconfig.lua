@@ -53,6 +53,7 @@ local servers = {
 	"htmx",
 	"lua_ls",
 	"marksman",
+	"pest_ls",
 	"prismals",
 	"pyright",
 	"svelte",
@@ -88,7 +89,7 @@ vim.lsp.config("clangd", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
-	cmd = { "clangd", "--background-index", "--compile-commands-dir=" .. vim.fn.getcwd() },
+	cmd = { "clangd", "--background-index", "--compile-commands-dir=" .. vim.fn.getcwd(), "--query-driver=**" },
 })
 
 vim.lsp.config("ltex_plus", {
