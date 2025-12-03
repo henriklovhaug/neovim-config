@@ -60,6 +60,7 @@ local servers = {
 	"tailwindcss",
 	"texlab",
 	"ts_ls",
+  "protols",
 	-- "markdown_oxide",
 }
 
@@ -89,7 +90,7 @@ vim.lsp.config("clangd", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
-	cmd = { "clangd", "--background-index", "--compile-commands-dir=" .. vim.fn.getcwd(), "--query-driver=**" },
+	cmd = { "clangd", "--background-index", "--compile-commands-dir=" .. vim.fn.getcwd(), "--query-driver=**", "--clang-tidy" },
 })
 
 vim.lsp.config("ltex_plus", {
