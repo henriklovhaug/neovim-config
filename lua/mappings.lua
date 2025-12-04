@@ -79,8 +79,7 @@ map("n", "æ", function()
 	vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Go to next diagnostic" })
 
-map({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
-map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat<cr>", { noremap = true, silent = true })
 map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "Visual code assistant" })
 
 -- Expand 'cc' into 'CodeCompanion' in the command line
