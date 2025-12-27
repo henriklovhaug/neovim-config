@@ -60,7 +60,7 @@ local servers = {
 	"tailwindcss",
 	"texlab",
 	"ts_ls",
-  "protols",
+	"protols",
 	-- "markdown_oxide",
 }
 
@@ -90,7 +90,13 @@ vim.lsp.config("clangd", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
-	cmd = { "clangd", "--background-index", "--compile-commands-dir=" .. vim.fn.getcwd(), "--query-driver=**", "--clang-tidy" },
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--compile-commands-dir=" .. vim.fn.getcwd(),
+		"--query-driver=**",
+		"--clang-tidy",
+	},
 })
 
 vim.lsp.config("ltex_plus", {
@@ -196,5 +202,6 @@ vim.lsp.config("gopls", {
 		},
 	},
 })
+
 -- Only enable the servers after every config has been set
 vim.lsp.enable(servers)
