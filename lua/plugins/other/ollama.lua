@@ -3,7 +3,7 @@ local ai = {
 		"olimorris/codecompanion.nvim",
 		lazy = false,
 		opts = {
-			strategies = {
+			interactions = {
 				chat = {
 					adapter = "ollama",
 					model = "gpt-oss:20b",
