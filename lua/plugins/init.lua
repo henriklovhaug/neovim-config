@@ -170,5 +170,11 @@ return {
 		opts = {},
 	},
 
+	{
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		opts = {},
+	},
+
 	{ import = "plugins.other" },
 }

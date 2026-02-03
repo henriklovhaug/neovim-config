@@ -82,5 +82,14 @@ end, { desc = "Go to next diagnostic" })
 map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat<cr>", { noremap = true, silent = true })
 map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "Visual code assistant" })
 
+map({ "n", "x", "o" }, "<CR>", function()
+	require("flash").treesitter({
+		actions = {
+			["<CR>"] = "next",
+			["<BS>"] = "prev",
+		},
+	})
+end, { desc = "Treesitter incremental selection" })
+
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
