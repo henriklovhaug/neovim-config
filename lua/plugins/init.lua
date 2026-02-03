@@ -28,6 +28,7 @@ return {
 
 	{
 		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
 		opts = overrides.treesitter,
 	},
 
@@ -94,17 +95,6 @@ return {
 		dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
 		config = function()
 			require("dap-go").setup()
-		end,
-	},
-
-	{
-		"dustinblackman/oatmeal.nvim",
-		cmd = { "Oatmeal" },
-		config = function()
-			require("oatmeal").setup({
-				backend = "ollama",
-				model = "deepseek-r1:8b",
-			})
 		end,
 	},
 
@@ -177,8 +167,6 @@ return {
 	},
 	{
 		"stevearc/quicker.nvim",
-		---@module "quicker"
-		---@type quicker.SetupOptions
 		opts = {},
 	},
 

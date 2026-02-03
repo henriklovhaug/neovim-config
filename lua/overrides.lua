@@ -1,14 +1,6 @@
 local M = {}
 
 M.treesitter = {
-	incremental_selection = {
-		enable = true,
-		keymaps = {
-			init_selection = "<Enter>",
-			node_incremental = "<Enter>",
-			node_decremental = "<BS>",
-		},
-	},
 	ensure_installed = {
 		"astro",
 		"bash",
@@ -41,12 +33,10 @@ M.treesitter = {
 		"typescript",
 		"vim",
 		"yaml",
+		"yang",
 	},
 	indent = {
 		enable = true,
-		-- disable = {
-		--   "python"
-		-- },
 	},
 }
 
