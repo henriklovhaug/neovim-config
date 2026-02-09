@@ -43,7 +43,6 @@ M.mason = {
 		"html-lsp",
 		"htmx-lsp",
 		"prettier",
-		"prettierd",
 		"typescript-language-server",
 
 		--tailwindcss
