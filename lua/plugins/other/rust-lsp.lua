@@ -6,7 +6,7 @@ local on_init = lspconfig.on_init
 
 local spec = {
 	"mrcjkb/rustaceanvim",
-	version = "^6", -- Recommended
+	version = "^8", -- Recommended
 	ft = { "rust" },
 }
 
