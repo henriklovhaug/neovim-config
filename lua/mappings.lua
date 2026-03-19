@@ -91,5 +91,8 @@ map({ "n", "x", "o" }, "<CR>", function()
 	})
 end, { desc = "Treesitter incremental selection" })
 
+map("n", "<leader>ws", "<cmd>split<cr>", { desc = "Split horizontally" })
+map("n", "<leader>wv", "<cmd>vsplit<cr>", { desc = "Split vertically" })
+
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])

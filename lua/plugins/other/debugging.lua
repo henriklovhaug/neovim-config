@@ -47,7 +47,27 @@ dap.configurations.rust = {
 	},
 }
 
+dap.adapters.gdb = {
+	type = "executable",
+	command = "gdb-multiarch",
+	args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
+}
+
+dap.configurations.cpp = {
+	{
+		type = "gdb",
+		name = "Debug",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+		end,
+		cwd = "${workspaceFolder}",
+		stopOnEntry = false,
+		args = {},
+		runInTerminal = false,
+	},
+}
+
 dap.configurations.c = dap.configurations.rust
-dap.configurations.cpp = dap.configurations.rust
 
 return spec
