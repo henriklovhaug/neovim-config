@@ -112,7 +112,6 @@ M.mason = {
 		-- cli
 		"ast-grep",
 		"gitui",
-		"trivy",
 
 		-- shell
 		"beautysh",
