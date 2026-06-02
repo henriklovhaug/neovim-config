@@ -34,6 +34,7 @@ M.treesitter = {
 		"vim",
 		"yaml",
 		"yang",
+		"ruby",
 	},
 	indent = {
 		enable = true,

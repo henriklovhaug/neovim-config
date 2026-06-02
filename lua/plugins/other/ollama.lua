@@ -6,7 +6,7 @@ local ai = {
 			interactions = {
 				chat = {
 					adapter = "ollama",
-					model = "gpt-oss:20b",
+					model = "qwen3.5-coder:latest",
 				},
 				inline = {
 					adapter = "ollama",
@@ -26,7 +26,7 @@ local ai = {
 							},
 							schema = {
 								model = {
-									default = "gpt-oss:20b",
+									default = "qwen3.5-coder:latest",
 									codellama = "codellama:13b",
 								},
 							},
