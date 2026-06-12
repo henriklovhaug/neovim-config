@@ -6,7 +6,7 @@ local ai = {
 			interactions = {
 				chat = {
 					adapter = "ollama",
-					model = "qwen3.5-coder:latest",
+					model = "gemma:12b-128k",
 				},
 				inline = {
 					adapter = "ollama",
@@ -26,7 +26,7 @@ local ai = {
 							},
 							schema = {
 								model = {
-									default = "qwen3.5-coder:latest",
+									default = "gemma:12b-128k",
 									codellama = "codellama:13b",
 								},
 							},
