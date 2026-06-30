@@ -82,7 +82,7 @@ end, { desc = "Go to next diagnostic" })
 map({ "n", "v" }, "<leader>a", "<cmd>CodeCompanionChat<cr>", { noremap = true, silent = true })
 map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "Visual code assistant" })
 
-map({ "n", "x", "o" }, "<CR>", function()
+map({ "n", "x", "o" }, "<leader><CR>", function()
 	require("flash").treesitter({
 		actions = {
 			["<CR>"] = "next",
