@@ -61,6 +61,7 @@ local servers = {
 	"tailwindcss",
 	"texlab",
 	"ts_ls",
+	"tinymist",
 	-- "markdown_oxide",
 }
 
