@@ -95,10 +95,11 @@ M.mason = {
 		"jdtls",
 		"vscode-java-decompiler",
 
-		-- latex
+		-- latex/typst
 		"latexindent",
 		"texlab",
 		"ltex-ls-plus",
+		"typstyle",
 
 		-- markdown
 		"harper-ls",

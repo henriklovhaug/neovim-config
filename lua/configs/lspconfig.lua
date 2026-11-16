@@ -55,12 +55,12 @@ local servers = {
 	"marksman",
 	"pest_ls",
 	"prismals",
+	"protols",
 	"pyright",
 	"svelte",
 	"tailwindcss",
 	"texlab",
 	"ts_ls",
-	"protols",
 	-- "markdown_oxide",
 }
 

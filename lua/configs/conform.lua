@@ -19,6 +19,8 @@ local options = {
 		yaml = { "prettier" },
 		json = { "deno_fmt" },
 
+		typst = { "typstyle" },
+
 		java = { "google-java-format" },
 
 		go = { "goimports", "gofmt", "goimports-reviser" },
