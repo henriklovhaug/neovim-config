@@ -54,10 +54,5 @@ return {
 		vim.keymap.set({ "n" }, "goo", function()
 			return require("opencode").operator("@this") .. "_"
 		end, { desc = "Send line to OpenCode", expr = true })
-		require("snacks").setup({
-			input = {
-				enabled = true, -- Enhances Ask
-			},
-		})
 	end,
 }
