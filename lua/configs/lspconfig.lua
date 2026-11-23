@@ -175,7 +175,7 @@ vim.lsp.config("harper_ls", {
 	on_attach = my_attach,
 	capabilities = capabilities,
 	on_init = on_init,
-	filetypes = { "markdown", "html", "plaintex" },
+	filetypes = { "markdown", "html", "plaintex", "typst" },
 	settings = {
 		["harper-ls"] = {
 			diagnosticSeverity = "hint", -- Can also be "information", "warning", or "error"
