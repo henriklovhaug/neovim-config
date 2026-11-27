@@ -1,6 +1,15 @@
 require("nvchad.mappings")
 local dap = require("dap")
 
+local opencode_cmd = "opencode"
+
+local snacks_terminal_opts = {
+	win = {
+		position = "right",
+		enter = false,
+	},
+}
+
 -- add yours here
 
 local map = vim.keymap.set
@@ -19,9 +28,9 @@ map({ "n", "v" }, ",", ":", { desc = "Enter command mode" })
 map("n", "G", "Gzz", { desc = "Go to end of file" })
 map("n", "T", "Gzt", { desc = "Go to end of file" })
 
-map({ "n", "v" }, "<leader>om", function()
-	require("oatmeal").start()
-end, { desc = "Oatmeal" })
+map({ "n", "v" }, "<leader>o", function()
+	require("snacks.terminal").open(opencode_cmd, snacks_terminal_opts)
+end, { desc = "Opencode" })
 
 map("n", "<leader>ft", function()
 	require("telescope.builtin").tags({ only_sort_tags = true })
